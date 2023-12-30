@@ -1,0 +1,46 @@
+
+
+
+.navigation.flex{
+    justify-content: space-between;
+    padding: 10px 100px;
+    background:#E6E6FA;
+    opacity: 0.9;
+    height: 12%;
+    position: fixed;
+    width: 100%;
+}
+    
+
+.navigation .navLogo{
+    color: 	#4ae40e;
+    font-family: sans-serif;
+    font-weight: 800;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.navigation .menu.flex{
+    gap: 30px;
+    font-size: 18px;
+    color: white;
+}
+
+.navigation .menu a{
+    color: rgb(46, 25, 97);
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.navigation .menu a:hover{
+    color: rgb(8, 52, 226);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+
+}
+
+.navigation .menu a.active{
+    color: rgb(47, 116, 243);
+}
+
