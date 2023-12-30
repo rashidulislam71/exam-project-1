@@ -5,7 +5,7 @@ import "../Common/Common.css";
 
 const Navigation = () => {
   return (
-    <div>
+    <div className="navigationParent">
       <div className="navigation flex">
         <div className="navLogo">
           <h1>

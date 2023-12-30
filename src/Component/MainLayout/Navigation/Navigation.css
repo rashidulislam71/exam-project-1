@@ -1,6 +1,12 @@
 
 
 
+.navigationParent{
+    /* position: relative;
+    margin: 0 auto;
+    max-width: 1200px; */
+}
+
 .navigation.flex{
     justify-content: space-between;
     padding: 10px 100px;
@@ -9,6 +15,8 @@
     height: 12%;
     position: fixed;
     width: 100%;
+    z-index: 10;
+    
 }
     
 
@@ -18,6 +26,7 @@
     font-weight: 800;
     padding: 10px 0px;
     cursor: pointer;
+   
 }
 
 .navigation .menu.flex{
