@@ -167,7 +167,7 @@ label {
 input#fullName,
 input#email,
 input#password,
-input#ConfirmPassword {
+input#confirmPassword {
     width: 100%;
     padding: 6px 2px;
     margin: 0px 0px 20px 0px;

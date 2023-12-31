@@ -3,11 +3,82 @@ import SocialSignUp from "../SocialSignUp/SocialSignUp";
 import "../../PagesCSS/Pages.css";
 import "../../../Component/MainLayout/Common/Common.css";
 import signUpImage from "../../../assets/images/sinup3.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../Firebase/Firebase.Config";
+
+import {
+  signInWithPopup,
+  GoogleAuthProvider,
+  GithubAuthProvider,
+} from "firebase/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import Loading from './../../../Component/Loading/Loading';
+import { ToastContainer, toast } from "react-toastify";
+
+
 
 const SignUp = () => {
+
+  const navigate = useNavigate();
+
+
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth, {
+      sendEmailVerification: true,
+    });
+
+  // updateProfile hook
+  const [updateProfile, updating] = useUpdateProfile(auth);
+
+  if (loading || updating) {
+    return <Loading />;
+  }
+
+  if(error){
+    return error
+  }
+
+  // Sign up with email and password
+  const signUpWithEmailAndPassword = async (e) => {
+    e.preventDefault();
+
+    const fullName = e.target.fullName.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const confirmPassword = e.target.confirmPassword.value;
+
+    console.log(fullName)
+    console.log(email)
+    console.log(password)
+    console.log(confirmPassword)
+
+    if (!fullName || !email || !password || !confirmPassword) {
+      return toast.error("Fill up the form before");
+    } 
+    else if (password !== confirmPassword) {
+      return toast.error("Password doesn't match!");
+    } 
+    else {
+      await createUserWithEmailAndPassword(email, password);
+      await updateProfile({ displayName: fullName });
+    }
+    
+  };
+
+  if(user){
+    navigate("/")
+  };
+
+ 
+
+
+
   return (
     <div className="signUpPageParent">
+      <ToastContainer />
       <Link to="/">
         <div className="logo">
           <h1>HALALA RIJIK</h1>
@@ -24,18 +95,23 @@ const SignUp = () => {
             <hr />
             <div className="haveAccount">
               <p>
-                Already Have An Account?<Link to="/login"> <span>Log In</span> </Link>
+                Already Have An Account?
+                <Link to="/login">
+                  {" "}
+                  <span>Log In</span>{" "}
+                </Link>
               </p>
             </div>
           </div>
 
           <div className="formInfo">
-            <form>
+            <form onSubmit={signUpWithEmailAndPassword}>
               <input
                 type="text"
                 name="fullName"
                 id="fullName"
                 placeholder="Full Name"
+                autoFocus
               />{" "}
               <br />
               <input
@@ -54,14 +130,14 @@ const SignUp = () => {
               <br />
               <input
                 type="password"
-                name="ConfirmPassword"
-                id="ConfirmPassword"
+                name="confirmPassword"
+                id="confirmPassword"
                 placeholder="Confirm Password."
               />
-            </form>
             <div className="submitBtn">
-              <button>REGISTRATION</button>
+              <button type="onsubmit" onSubmit={signUpWithEmailAndPassword}>REGISTRATION</button>
             </div>
+            </form>
           </div>
           <SocialSignUp />
         </div>
