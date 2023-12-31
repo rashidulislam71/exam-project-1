@@ -1,13 +1,51 @@
+import React from "react";
+import useFetchData from './../../Component/useFetchData/useFetchData';
+import Loading from './../../Component/Loading/Loading';
 
-import React from 'react';
-import "../PagesCSS/Pages.css"
 
 const Jobs = () => {
+  
+  const {data,loading, error}= useFetchData("http://localhost:9000/jobs") 
+
+  if (!data) {
+    return undefined;
+  }
+
+  if (loading) {
+    return <Loading />
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
+
   return (
     <div>
       <div className="jobsSection">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ex, aliquid eius hic eveniet dolore esse vero. Iure assumenda quaerat odit inventore excepturi nesciunt suscipit reprehenderit dolor asperiores eligendi fuga eveniet eum incidunt atque quis accusamus culpa tempora magnam neque, ullam ipsam sed modi? Excepturi quaerat, nam sapiente aut explicabo quod numquam. Rem unde rerum, ullam autem maiores quia laborum voluptas suscipit veritatis, tempore iure quo ipsa accusamus porro vero quis eaque ea ducimus repellat cupiditate harum. Aliquid tempore, assumenda deleniti consequuntur quia nemo, ut veritatis optio accusamus iste odit alias labore sint reiciendis? Excepturi ducimus explicabo non iusto optio at libero iure qui accusamus, deleniti consequatur ad rem officiis nobis. Laboriosam temporibus sed, id amet natus ipsum eaque ad nesciunt eveniet saepe sint architecto laborum quasi vel dolores fuga accusamus assumenda a modi voluptate tempore blanditiis delectus! Expedita commodi, eos accusamus voluptate veritatis molestias quae eius qui magni doloribus asperiores nemo recusandae deleniti repellat, ducimus veniam natus maxime animi earum facere. Voluptatibus nesciunt veniam facere fuga ratione, est atque aut, odit maiores in tempore? Labore deleniti obcaecati ab dolorem suscipit iusto quia consequuntur quos voluptatem laborum autem, dicta voluptas provident in debitis ipsam laudantium possimus quam illo quidem excepturi voluptate earum fugit accusantium. Blanditiis similique harum, vitae sed consequuntur dolores est nesciunt aliquid voluptas minus cumque voluptatibus delectus nisi, possimus ullam fugiat quos rerum, nulla deleniti unde! Ex quibusdam voluptate ipsa culpa excepturi quis, enim minima cumque dolore dolorum esse recusandae repellat vitae corporis obcaecati inventore autem fugiat illo beatae consequatur cupiditate quod nemo doloremque deserunt. Libero deserunt animi repellat voluptatum eveniet voluptatem culpa. Aliquid, doloribus architecto beatae quibusdam autem mollitia eveniet aspernatur. Velit, incidunt ullam consequuntur ipsam ut iste provident repellat sapiente, nisi exercitationem ratione porro a numquam blanditiis ipsa. Facere, incidunt quia, impedit hic ducimus dolor sunt ab vel culpa quo, atque nobis iste perferendis distinctio! Cupiditate neque exercitationem provident amet atque soluta libero itaque, accusantium blanditiis facere quidem iure quod quam labore sit repellat necessitatibus voluptas molestias, consequuntur maxime. Quam ab fugiat cupiditate fugit repellendus consectetur laudantium possimus autem culpa! Cupiditate, eos? Cupiditate possimus consectetur quas facilis atque perferendis, excepturi similique nemo rem optio itaque quisquam officia in porro, earum quia modi labore neque explicabo ea obcaecati provident quaerat nihil est. Eligendi, sunt? Quasi, autem. Earum tempora inventore assumenda quaerat id? Reiciendis harum natus voluptate aliquid, asperiores, veritatis aperiam porro, dolorem repellat voluptatum voluptatem consequuntur nulla?
+        <ul>
+          {data.map((value) => (
+            <div key={value.id}>
+              <img src={value.logo} alt="" />
+              <p>
+                <span>Company Name: </span>
+                {value.companyName}
+            
+              </p>
+              <p>
+                <span>Title: </span>
+                {value.title}
+              </p>
+              <p>
+                <span>Position: </span> {value.position}
+              </p>
+              <p>
+                <span>Description: </span> {value.description}
+              </p>
+              </div>
+          ))}
+        </ul>
       </div>
+
     </div>
   );
 };

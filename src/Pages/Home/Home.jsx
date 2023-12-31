@@ -2,26 +2,27 @@ import React, { useEffect, useState } from "react";
 import "../PagesCSS/Pages.css";
 import bannerImage from "../../assets/images/banner3.jpg";
 import { Link } from "react-router-dom";
+import useFetchData from './../../Component/useFetchData/useFetchData';
+import Loading from './../../Component/Loading/Loading';
+
+
 
 function Home() {
-  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:9000/jobs");
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  const {data, loading, error} = useFetchData("http://localhost:9000/jobs")
+  const sliceData = data.slice(0,5)
 
-    fetchData();
-  }, []);
+  if (loading) {
+    return <Loading />
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
 
   return (
     <div>
+   
       <div className="homePage">
         <div className="heroSection">
           <div className="bannerInfo">
@@ -37,9 +38,9 @@ function Home() {
                   exciting opportunities and fulfilling careers.
                 </p>
               </div>
-              <Link to= "/login">
+              <Link to="/login">
                 <div className="ExploreNewBtn">
-                  <button>Explore Now...</button>
+                  <button>Explore Now.......</button>
                 </div>
               </Link>
             </div>
@@ -47,7 +48,7 @@ function Home() {
 
           <div className="fetchData">
             <ul>
-              {data.map((value) => (
+              {sliceData.map((value) => (
                 <div key={value.id} className="data">
                   <li>
                     <span>Title: </span>
@@ -65,7 +66,9 @@ function Home() {
                     <span>Position: </span>
                     {value.position}
                   </li>
-                  <button>Explore All Jobs</button>
+                  <Link to="/jobs">
+                    <button>Explore All Jobs</button>
+                  </Link>
                 </div>
               ))}
             </ul>
