@@ -1,12 +1,23 @@
 import React from "react";
 import SocialSignUp from "../SocialSignUp/SocialSignUp";
-import "../../PagesCSS/Pages.css"
-import "../../../Component/MainLayout/Common/Common.css"
+import "../../PagesCSS/Pages.css";
+import "../../../Component/MainLayout/Common/Common.css";
+import signUpImage from "../../../assets/images/sinup3.jpg";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
     <div className="signUpPageParent">
-      <div className="signUpPageInfo">
+      <Link to="/">
+        <div className="logo">
+          <h1>HALALA RIJIK</h1>
+        </div>
+      </Link>
+
+      <div className="signUpPageInfo flex">
+        <div className="SigUpImage">
+          <img src={signUpImage} alt="" />
+        </div>
         <div className="signUpForm">
           <div className="title">
             <h1>Registration</h1>
@@ -20,7 +31,6 @@ const SignUp = () => {
 
           <div className="formInfo">
             <form>
-              <label>Full Name:</label> <br />
               <input
                 type="text"
                 name="fullName"
@@ -28,7 +38,6 @@ const SignUp = () => {
                 placeholder="Full Name"
               />{" "}
               <br />
-              <label>Email:</label> <br />
               <input
                 type="email"
                 name="email"
@@ -36,7 +45,6 @@ const SignUp = () => {
                 placeholder="Email"
               />{" "}
               <br />
-              <label>Password:</label> <br />
               <input
                 type="password"
                 name="password"
@@ -44,7 +52,6 @@ const SignUp = () => {
                 placeholder="Password"
               />{" "}
               <br />
-              <label>Confirm Password:</label> <br />
               <input
                 type="password"
                 name="ConfirmPassword"

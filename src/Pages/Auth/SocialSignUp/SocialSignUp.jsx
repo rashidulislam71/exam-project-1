@@ -1,4 +1,5 @@
-
+import { VscGithubInverted } from "react-icons/vsc";
+import { IoLogoGoogleplus } from "react-icons/io";
 
 const SocialSignUp = () => {
     return (
@@ -6,22 +7,25 @@ const SocialSignUp = () => {
 
         <div>
             <div className="socialSignUpInfo">
-                <div className="social">
-                    <div className="google">
-                        <div className="logo">
-                            <img src="" alt="" />
+                <div className="or flex">
+                    <hr /><p>or</p>  <hr />
+                </div>
+                <div className="social flex">
+                    <div className="google flex">
+                        <div className="googleLogo flex">
+                        <IoLogoGoogleplus />
                         </div>
                         <div className="text">
-                            <button>Sign Up With Google</button>
+                            <button className="googleBtn">Sign Up With Google</button>
                         </div>
                     </div>
 
-                    <div className="gitHub">
-                        <div className="logo">
-                            <img src="" alt="" />
+                    <div className="gitHub flex">
+                        <div className="gitHubLogo flex">
+                        <VscGithubInverted />
                         </div>
                         <div className="text">
-                            <button>Sign Up With GitHub</button>
+                            <button className="gitBtn">Sign Up With GitHub</button>
                         </div>
                     </div>
                 </div>
