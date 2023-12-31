@@ -24,7 +24,7 @@ const SignUp = () => {
             <hr />
             <div className="haveAccount">
               <p>
-                Already Have An Account? <span>Log In</span>
+                Already Have An Account?<Link to="/login"> <span>Log In</span> </Link>
               </p>
             </div>
           </div>

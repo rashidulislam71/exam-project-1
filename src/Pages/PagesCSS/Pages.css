@@ -1,43 +1,44 @@
-
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    
+
 }
 
 /**-----Home start-------**/
 
-.homePage, .favoriteSection, .jobsSection, .aboutPage, .contactPage 
-{
+.homePage,
+.favoriteSection,
+.jobsSection,
+.aboutPage,
+.contactPage {
     height: auto;
     padding-top: 70px;
 
 
 }
 
-.heroSection{
+.heroSection {
     position: relative;
 }
 
-.bannerInfo{
+.bannerInfo {
     position: relative;
     border-top: 5px solid goldenrod;
 
 
 }
 
-.bannerText{
+.bannerText {
     position: absolute;
-    top: 50% ;
+    top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
     color: azure;
 }
 
-.imgDiv img{
+.imgDiv img {
     max-width: 100%;
 
 }
@@ -68,7 +69,7 @@ h1.title {
 
 }
 
-.ExploreNewBtn button:hover{
+.ExploreNewBtn button:hover {
     background: rgb(39, 148, 221);
 }
 
@@ -85,32 +86,36 @@ h1.title {
     margin: 0 auto;
 }
 
-.signUpPageParent a{
-    text-decoration: none;
-}
-.logo h1{
-    padding: 10px 100px;
-    color: rgb(92, 231, 38);
+.signUpPageParent a {
     text-decoration: none;
 }
 
-.SigUpImage img{
-   height: 500px; 
-   width: 630px;
-   box-shadow: 1px 1px 10px white;
-   border: 3px solid rgb(153, 150, 150);
-   border-radius: 8px 100px;
-   outline: 1px solid #00bfff;
+.logo h1 {
+    color: 	rgb(9, 25, 51);
+    padding: 10px 100px;
+    cursor: pointer;
+    
+}
+
+.SigUpImage img {
+    height: 500px;
+    width: 630px;
+    box-shadow: 1px 1px 10px white;
+    border: 3px solid rgb(153, 150, 150);
+    border-radius: 8px 100px;
+    outline: 1px solid #00bfff;
     outline-offset: 10px;
 }
 
 
 
-.signUpPageInfo.flex{
+.signUpPageInfo.flex,
+.signInPageInfo.flex {
     gap: 100px;
+    position: relative;
 }
 
-.signUpForm{
+.signUpForm {
     margin: 20px 0;
     padding: 20px;
     border-radius: 5px;
@@ -118,41 +123,43 @@ h1.title {
     z-index: 1;
     border: 1px solid rgb(184, 182, 182);
 }
-.signUpForm .title{
-}
-.signUpForm .title h1{
+
+.signUpForm .title {}
+
+.signUpForm .title h1 {
     text-align: center;
     font-size: 33px;
     color: rgb(102, 105, 103);
 }
 
-hr{
+hr {
     margin: 17px 0px 10px 0px;
     color: rgb(184, 182, 182);
 }
-.haveAccount{
+
+.haveAccount {
     font-size: 20px;
     margin: 20px 0px;
 }
-.haveAccount p{
 
-}
-.haveAccount p span{
+.haveAccount p {}
+
+.haveAccount p span {
     font-size: 25px;
-    color: 	#00008B;
+    color: #00008B;
     cursor: pointer;
     transition: all ease .2s;
- 
+
 }
 
-.haveAccount p span:hover{
+.haveAccount p span:hover {
     color: #0000CD;
     text-decoration: underline;
 }
 
-.formInfo{}
+.formInfo {}
 
-label{
+label {
     font-size: 20px;
     color: rgb(54, 53, 53);
 }
@@ -160,8 +167,7 @@ label{
 input#fullName,
 input#email,
 input#password,
-input#ConfirmPassword
-{
+input#ConfirmPassword {
     width: 100%;
     padding: 6px 2px;
     margin: 0px 0px 20px 0px;
@@ -173,7 +179,8 @@ input#ConfirmPassword
 }
 
 .submitBtn {}
-.submitBtn button{
+
+.submitBtn button {
     margin-top: 25px;
     padding: 10px 10px;
     width: 100%;
@@ -186,32 +193,33 @@ input#ConfirmPassword
     color: white;
 }
 
-.submitBtn button:hover{
+.submitBtn button:hover {
     background-color: rgb(43, 62, 236);
     box-shadow: 3px 3px 10px rgb(92, 142, 216);
 }
 
 /**-------Social start---------**/
 
-.or hr{
+.or hr {
     width: 160px;
     margin-inline: 5px;
     margin-top: 30px;
 }
 
-.or p{
+.or p {
     margin-top: 20px;
     color: gray;
 }
 
 
-.socialSignUpInfo{}
+.socialSignUpInfo {}
 
-.social{
+.social {
     gap: 30px;
 }
 
-.google, .gitHub{
+.google,
+.gitHub {
     margin-top: 20px;
     color: white;
     border-radius: 3px;
@@ -219,30 +227,32 @@ input#ConfirmPassword
     transition: all ease .2s;
 }
 
-.google:hover, .gitHub:hover{
+.google:hover,
+.gitHub:hover {
     box-shadow: 3px 3px 10px rgb(65, 63, 63);
 }
 
-.gitHub{
+.gitHub {
     background-color: black;
 }
 
-.google{
+.google {
     background-color: rgb(58, 170, 88);
 }
 
-.googleLogo{
+.googleLogo {
     font-size: 50px;
-    margin-left: 10px; 
+    margin-left: 10px;
 }
- .gitHubLogo{
+
+.gitHubLogo {
     font-size: 35px;
     color: rgb(240, 239, 239);
     margin-left: 10px;
 }
 
 
-.text button{
+.text button {
     padding: 10px 0px;
     font-size: 16px;
     border: none;
@@ -252,25 +262,73 @@ input#ConfirmPassword
     cursor: pointer;
 }
 
-.googleBtn{
+.googleBtn {
     background-color: rgb(58, 170, 88);
-    
+
 }
 
-.gitBtn{
-    background-color: #000; 
+.gitBtn {
+    background-color: #000;
 }
 
 
 
 
 /**-------Social End---------**/
-
 /**-----Sign Up End-------**/
 
 
-/**-----Home start-------**/
-/**-----Home start-------**/
+/**-----LogIn start-------**/
+
+.signInPageInfo{
+    gap: 0px;
+}
+.LogInImage {}
+
+.LogInImage img {
+    height: 350px;
+    width: 400px;
+    border: none;
+    border: none;
+    outline: none;
+}
+
+.motivation {
+    width: 600px;
+    height: 515px;
+   position: relative;
+    
+}
+
+.motivation .mTitle h1 {
+    margin-bottom: 30px;
+    color:green;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.motivationText{
+    max-width: 500px;
+    height: 515px;
+}
+.motivationText p {
+  margin-bottom: 100px;
+  position: absolute;
+  top: 320px;
+  left: 60px;
+  font-size: 17px;
+}
+
+.motivationText span{
+  font-size: 30px;
+  color:rgb(38, 75, 155);
+  font-weight: 600;
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+/**-----LogIn End-------**/
 
 
 
