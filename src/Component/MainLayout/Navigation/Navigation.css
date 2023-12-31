@@ -6,7 +6,7 @@
     margin: 0 auto;
     max-width: 1200px; */
 }
-
+/* 
 .navigation.flex{
     justify-content: space-between;
     padding: 10px 100px;
@@ -33,6 +33,7 @@
     gap: 30px;
     font-size: 18px;
     color: white;
+    
 }
 
 .navigation .menu a{
@@ -51,5 +52,137 @@
 
 .navigation .menu a.active{
     color: rgb(47, 116, 243);
-}
+} */
 
+
+
+/* @media screen and (max-width: 600px) {
+    .navigation.flex {
+      padding: 10px;
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start; 
+    }
+  
+    .navigation .navLogo {
+      text-align: center;
+    }
+  
+    .navigation .menu.flex {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%; 
+      align-items: center;
+    }
+  
+    .navigation .menu a {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1025px) {
+    .navigation.flex {
+      padding: 10px 100px;
+    }
+  
+    .navigation .menu.flex {
+      gap: 30px;
+      font-size: 18px;
+    }
+  } */
+
+
+
+  .navigationParent {
+    width: 100%;
+  }
+  
+  .navigation.flex {
+    background: #E6E6FA;
+    opacity: 0.95;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navigation .navLogo {
+    color: rgb(9, 25, 51);
+    font-weight: 800;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .navigation .menu.flex {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .navigation .menu a {
+    color: rgb(46, 25, 97);
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  
+  .navigation .menu a:hover {
+    color: rgb(8, 52, 226);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+  
+  .navigation .menu a.active {
+    color: rgb(47, 116, 243);
+  }
+  
+  /* Media query for tablets */
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    .navigation.flex {
+      padding: 15px 50px;
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 600px) {
+    .navigation.flex {
+      flex-direction: column;
+      padding: 15px;
+      height: auto;
+    }
+  
+    .navigation .navLogo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .navigation .menu.flex {
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .navigation .menu a {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  
+  /* Additional styles for larger screens (PCs) */
+  @media screen and (min-width: 1025px) {
+    .navigation.flex {
+      padding: 15px 100px;
+    }
+  
+    .navigation .menu.flex {
+      gap: 30px;
+      font-size: 18px;
+    }
+  }

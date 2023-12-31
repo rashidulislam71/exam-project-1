@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navigation.css";
 import "../Common/Common.css";
@@ -9,7 +9,12 @@ import { signOut } from "firebase/auth";
 const Navigation = () => {
   const [user] = useAuthState(auth);
 
-  
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   const logout = () => {
     signOut(auth);
   };
@@ -23,6 +28,19 @@ const Navigation = () => {
           </h1>
         </div>
 
+        {/* Menu Toggle Button */}
+        <div className="menuToggle" onClick={toggleMenu}>
+          {isMenuOpen ? "✕" : "☰"}
+        </div>
+
+        {/* Menu */}
+        <div className={`menu flex ${isMenuOpen ? "open" : ""}`}>
+          {/* Close Icon */}
+          <div className="closeIcon" onClick={toggleMenu}>
+            &times;
+          </div>
+        </div>
+
         <div className="menu flex">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/jobs">JOBS</NavLink>
@@ -30,16 +48,24 @@ const Navigation = () => {
           <NavLink to="/contact">CONTACT</NavLink>
 
           {user ? (
-            <Link onClick={logout} to="/login">
-              Logout
-            </Link>
+            <NavLink onClick={logout} to="/login">
+              LOGOUT
+            </NavLink>
           ) : (
-            <Link to="/login">LogIn</Link>
+            <NavLink to="/login">LOGIN</NavLink>
           )}
           {user ? (
-            <span>{user?.displayName}</span>
+            <span
+              style={{
+                cursor: "pointer",
+                textTransform: "uppercase",
+                color: "rgb(254, 94, 1)",
+              }}
+            >
+              {user?.displayName}
+            </span>
           ) : (
-            <NavLink to="/signup">Sign Up</NavLink>
+            <NavLink to="/signup">SIGN IN</NavLink>
           )}
 
           <span>{user?.photoURL ? <img src={user?.photoURL}></img> : ""}</span>

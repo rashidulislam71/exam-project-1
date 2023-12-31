@@ -1,7 +1,124 @@
 
 
-.footerSection{
-    height: 40vh;
-    background: #000;
-    color: white;
-}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #2c3e50; 
+    color: #ecf0f1; 
+    font-family: 'Arial', sans-serif;
+    position: relative;
+  }
+  
+  .footerLogo {
+    position: absolute;
+    top: 45px;
+    left: 100px;
+  }
+  
+  .footer-column {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin: 20px 0; 
+  }
+  
+  .footer-column h2 {
+    margin-bottom: 20px;
+    position: relative;
+    color: rgb(211, 227, 253);
+    padding-top: 50px;
+  }
+  
+  .footer-column h2::after {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 70%; 
+    height: 1px;
+    background-color: rgb(148, 144, 144);
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    color: #ecf0f1;
+    margin: 0 10px;
+    font-size: 27px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #3498db;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 17px;
+    font-family: sans-serif;
+  }
+  
+  ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: #3498db;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  
+  div.footerHr {
+    width: 100%;
+    border-bottom: 1px solid rgb(48, 47, 47);
+    margin: 10px 0; 
+  }
+  
+  .footer-title {
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  /* Mobile Styles */
+  @media (min-width: 0px) {
+    .footer-column {
+      width: 100%;
+    }
+  }
+  
+  /* Tablet Styles */
+  @media (min-width: 768px) {
+    .footer-column {
+      width: 48%;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 1200px) {
+    .footer-column {
+      width: 22%;
+    }
+  }

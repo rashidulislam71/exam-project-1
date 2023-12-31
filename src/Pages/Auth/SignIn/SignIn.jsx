@@ -36,12 +36,11 @@ const SignIn = () => {
     else {
       await signInWithEmailAndPassword(email, password);
     }
-    if (user) {
-      navigate("/");
-    }
-   
+    
   };
-
+  if (user) {
+    navigate("/");
+  }
   
 
   return (
