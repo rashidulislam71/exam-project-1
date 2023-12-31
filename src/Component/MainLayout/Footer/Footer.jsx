@@ -16,25 +16,23 @@ const Footer = () => {
           {/* Contact Us */}
           <h2>Contact Us</h2>
           <div className="social-icons">
-            <a href="#">
+            <a href="#" target="_blank">
               <FaInstagramSquare />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/rashidulislam7/" target="_blank">
               <FaLinkedin />
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/rashidulislam72/" target="_blank">
               <FaSquareFacebook />
             </a>
 
-            <a href="#">
+            <a href="#" target="_blank">
               <FaSquareTwitter />
             </a>
-            <a href="#">
+            <a href="#" target="_blank">
               <BsDiscord />
             </a>
-            <a href="#">
-              <MdMarkEmailUnread />
-            </a>
+            
           </div>
           <ul>
             <li> <a href="#">123 Street, Dhaka, Bangladesh</a></li>
