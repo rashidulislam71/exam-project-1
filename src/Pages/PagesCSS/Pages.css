@@ -135,7 +135,7 @@ h1.title {
 .jobCard{
     padding: 20px;
     width: 400px;
-    background-color: #dceff1;
+    background-color: #e7f0f1;;
     text-align: center;
     border-radius: 2px;
     margin-bottom: 25px;
@@ -525,7 +525,6 @@ input#confirmPassword {
     color:rgb(131, 170, 231) ;
     border-bottom: 1px solid;
     padding: 5px 0px;
-    /* max-width: fit-content; */
     
   }
   
@@ -637,3 +636,139 @@ input#confirmPassword {
   }
 
 /**-----About page End-------**/
+
+
+
+/**-----Contact page Start-------**/
+
+.contact-page {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 800;
+  color:rgb(90, 166, 222) ;
+  border-bottom: 1px solid;
+}
+
+.contact-header p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input#ConName,
+input#email
+{
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc ;
+  border-right: 1px solid #ccc ;
+  border-radius: 0px 20px;
+}
+
+textarea{
+  width: 100%;
+  font-size: 20px;
+  outline: none;
+  padding:20px 0px 0px 10px;
+  border-radius: 20px 0px;
+  margin-top: 8px;
+}
+
+
+.sendBtn button {
+  width: 100%;
+  padding: 10px ;
+  font-size: 22px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  background: rgb(12, 101, 160);
+  color: rgb(228, 237, 243);
+  transition: all 0.3s ease;
+}
+
+.sendBtn button:hover {
+  background-color: rgb(0, 119, 201);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.jobs-paragraph {
+  margin-top: 40px;
+}
+
+.jobs-paragraph h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color:rgb(90, 166, 222) ;
+}
+
+.jobs-paragraph p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsive design  */
+@media screen and (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 32px;
+  }
+
+  .jobs-paragraph h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    max-width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .contact-header h1 {
+    font-size: 24px;
+  }
+
+  .jobs-paragraph h2 {
+    font-size: 24px;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+}
+/**-----Contact page End-------**/
