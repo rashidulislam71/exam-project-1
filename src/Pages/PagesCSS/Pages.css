@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-
+    font-family: 'Noto Serif', sans-serif;
 }
 
 /**-------Fonts--------**/
@@ -15,7 +15,7 @@
 .homePage,
 .favoriteSection,
 .jobsSection,
-.aboutPage,
+.about-page,
 .contactPage {
     height: auto;
     padding-top: 70px;
@@ -81,18 +81,21 @@ h1.title {
 .jobsSection{
     font-family: sans-serif;
 }
+
 .jobsSection .jobs{
     margin: 0 auto;
 }
+
 .jobsSection .title{
     text-align: center;
 }
+
 .jobsSection .title .bePositive{
     font-size: 30px;
     padding: 10px;
     font-family: 'Noto Serif', sans-serif;
     font-weight: 600;
-    color: rgb(0, 94, 31);
+    color: rgb(90, 166, 222);
     margin-bottom: 20px;
 }
 
@@ -110,84 +113,118 @@ h1.title {
 
 
 
-.fetchData{}
-.jobCardInfo.flex{}
+.fetchData{
+    font-family: 'Noto Serif', sans-serif;
+}
 
-.jobCard {
-    /* background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+.yourJobs h1{
+    text-align: center;
+    padding: 20px;
+    color: rgb(90, 166, 222);
+    outline: 1px solid;
+    font-size: 40px;
+    font-weight: 700;
+}
+.jobCardInfo.flex{
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-between;
+    padding: 40px;
+}
 
+.jobCard{
+    padding: 20px;
+    width: 400px;
+    background-color: #dceff1;
+    text-align: center;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+.jobCard .cImage{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 100px;
+    color: rgb(90, 166, 222);
+    text-align: left;
+   
   }
   
-  .jobCard img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+  .jobCard .cImage img {
+    height: 65px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 3px;
+  }
+
+  .jobCard p {
+    font-size: 17px;
+    color: rgb(16, 53, 102);
+    text-align: left;
+  }
+  .jobCard p span{
+    color: rgb(50, 72, 102);
+    font-size: 20px;
+    font-style: italic;
+    border-bottom: 1px solid rgb(81, 95, 112);
+    
   }
   
   .jobCard button {
-    padding: 10px 15px;
-    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    width: 70%;
+    padding: 10px 0px;
+    font-size: 18px;
     border-radius: 3px;
-    background: #007bff;
-    color: #fff;
+    background: rgb(11, 34, 65);
+    color: rgb(211, 227, 253);
     border: none;
     cursor: pointer;
     transition: 0.3s;
   }
   
   .jobCard button:hover {
-    background: #0056b3;
+    background:rgb(42, 113, 207);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
+
+  .exploreAllJobBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.exploreAllJobBtn button{
+        width: 300px;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 2px;
+        background: rgb(0, 119, 201);
+        color: #fffcfc;
+        margin-block: 40px;
+        cursor: pointer;
+        transition: .3s;
+        border: none;
+        outline: none;
+    
+  } 
+
 
 /**-------Job Section End---------**/
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-    .bannerText {
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  
-    .bannerText h1.title {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-  
-    .text {
-      font-size: 16px;
-      line-height: 24px;
-      max-width: 100%;
-    }
-  
-    .ExploreNewBtn button {
-      margin-block: 20px;
-    }
-  
-    .fetchData ul {
-      padding: 0;
-    }
-  
-    .data {
-      margin-bottom: 20px;
-    }
-  }
 
 /**-----Home End-------**/
 
 
+
+
 /**-----Sign Up start-------**/
-
-
-
 
 .signUpPageParent {
     height: auto;
@@ -440,5 +477,163 @@ input#confirmPassword {
 
 
 
-/**-----Home start-------**/
-/**-----Home start-------**/
+/**-----About page start-------**/
+  
+
+.about-page{
+    padding: 100px 70px;
+}
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  
+  }
+  
+  .header h1 {
+    font-size: 40px;
+    margin: 30px;
+    color:rgb(131, 170, 231) ;
+    
+  }
+  
+  .content .title {
+    font-size: 25px;
+    color: rgb(45, 95, 45);
+    margin-top: -10px;
+    padding: 10px 0px;
+    border-bottom: 1px solid magenta;
+
+  }
+  
+  .content {
+    margin-bottom: 20px;
+    }
+  .content p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .features {
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+  
+  .features h2 {
+    font-size: 40px;
+    margin: 100px auto;
+    color:rgb(131, 170, 231) ;
+    border-bottom: 1px solid;
+    padding: 5px 0px;
+    /* max-width: fit-content; */
+    
+  }
+  
+  .features ul {
+    list-style-type: none;
+    padding: 0;
+   margin-top: -70px;
+  }
+  
+  .features li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .team {
+    margin-bottom: 20px;
+    
+  }
+  
+ h2.meetOutTeam {
+    margin-block: 80px 40px;
+    text-align: center;
+    font-size: 40px;;
+    color:rgb(131, 170, 231) ;
+    border-bottom: 1px solid rgb(34, 34, 32);
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .team-member {
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .team-member img {
+    max-width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .member-info {
+    padding: 20px;
+  }
+  
+  .member-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .member-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  /* Responsive design  about page */
+  @media screen and (max-width: 768px) {
+    .about-page{
+        text-align:left;
+    }
+  
+    .header h1 {
+      font-size: 32px;
+    }
+  
+    .features h2 {
+      font-size: 32px;
+    }
+
+    h2.meetOutTeam {
+    text-align: center;
+    font-size: 30px;
+    
+  }
+  
+    .team-member {
+      width: 100%;
+    }
+  }
+  
+  
+  @media screen and (max-width: 480px) {
+    .header h1 {
+      font-size: 30px;
+    }
+  
+    .features h2 {
+      font-size: 25px;
+    }
+
+     h2.meetOutTeam {
+        text-align: center;
+        font-size: 30px;
+      }
+  
+    .team-member {
+      width: 100%;
+    }
+  }
+
+/**-----About page End-------**/

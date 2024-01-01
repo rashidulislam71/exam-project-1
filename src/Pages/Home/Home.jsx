@@ -7,7 +7,7 @@ import Loading from "./../../Component/Loading/Loading";
 
 function Home() {
   const { data, loading, error } = useFetchData("http://localhost:9000/jobs");
-  const sliceData = data.slice(0, 5);
+  const sliceData = data.slice(0, 6);
 
   if (loading) {
     return <Loading />;
@@ -54,24 +54,35 @@ function Home() {
                 </h1>
               </div>
               <p className="motivedForJob">
-              Embarking on a job search is a journey of self-discovery and growth. Every application, every interview, and every setback is a stepping stone toward your professional destination. Embrace challenges, refine your strategy, and stay resilient. Your unique skills are in demand, and the perfect opportunity awaits. Learn from each experience, adapt, and keep navigating the dynamic job market. Trust in your capabilities, believe in your journey and persist. Remember, every effort brings you closer to the fulfilling career you envision. Stay focused, and stay motivated, and success will be the reward for your dedication and determination.
+                Embarking on a job search is a journey of self-discovery and
+                growth. Every application, every interview, and every setback is
+                a stepping stone toward your professional destination. Embrace
+                challenges, refine your strategy, and stay resilient. Your
+                unique skills are in demand, and the perfect opportunity awaits.
+                Learn from each experience, adapt, and keep navigating the
+                dynamic job market. Trust in your capabilities, believe in your
+                journey and persist. Remember, every effort brings you closer to
+                the fulfilling career you envision. Stay focused, and stay
+                motivated, and success will be the reward for your dedication
+                and determination.
               </p>
             </div>
           </div>
           <hr />
           <div className="fetchData">
+            <div className="yourJobs">
+              <h1>Your Jobs:</h1>
+            </div>
             <ul className="jobCardInfo flex">
               {sliceData.map((value) => (
-                <div>
+                <div key={value.id}>
                   <div key={value.id} className="jobCard">
-                    <p>
-                      <span></span>
+                    <span className="cImage">
                       {<img src={value.logo} alt="" />}
-                    </p>
-                    <li>
-                      <span>Company Name: </span>
+
                       {value.companyName}
-                    </li>
+                    </span>
+                    <hr />
                     <p>
                       <span>Title: </span>
                       {value.title}
@@ -80,17 +91,19 @@ function Home() {
                       <span>Position: </span>
                       {value.position}
                     </p>
-                    <p>
-                      <span>Description: </span>
-                      {value.description}
-                    </p>
+
                     <Link to="/jobs">
-                      <button>Explore Job</button>
+                      <button>Details</button>
                     </Link>
                   </div>
                 </div>
               ))}
             </ul>
+            <div className="exploreAllJobBtn">
+              <Link to="/jobs">
+                <button>Explore All Job........... </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

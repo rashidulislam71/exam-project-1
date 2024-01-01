@@ -1,12 +1,105 @@
-
-import React from 'react';
-import "../PagesCSS/Pages.css"
+import React from "react";
+import "../PagesCSS/Pages.css";
 
 const About = () => {
   return (
-    <div>
-      <div className="aboutPage">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquam rem vitae doloribus labore, praesentium error voluptates sunt autem, temporibus eligendi impedit! Eveniet, ipsam! Quaerat, ipsam harum totam sapiente veniam sed corporis accusamus recusandae eum voluptas, inventore neque necessitatibus quas fugit qui amet! Expedita suscipit fuga quisquam vero laborum, facilis sint pariatur unde tenetur! Quos voluptates sit molestiae facere atque veritatis, iure iusto perferendis officiis fugiat quis autem recusandae accusantium cumque dolore aspernatur ducimus nisi eum et odio vero dolor? Sit nemo, officia, vel cum eum quisquam quia, incidunt voluptatem ex similique nobis nulla culpa quis exercitationem? Accusantium, ea autem. Ad reprehenderit ea ducimus, inventore iusto cumque fugiat nulla, eveniet maxime exercitationem, mollitia et earum. Explicabo, quo saepe rem autem amet nostrum quae totam nulla temporibus mollitia hic itaque incidunt repellat ex inventore fugiat consequatur, suscipit tempore cumque ab officia perspiciatis dignissimos vel. Maiores doloribus, eius quo nemo voluptates animi consectetur nam nihil unde itaque quam ad, quibusdam, possimus neque dolore inventore nulla repudiandae quaerat velit expedita accusantium. Ea earum itaque ut illum. Cupiditate sunt, reprehenderit magni, sed placeat dolorum ab nisi dignissimos ut doloribus officiis? Placeat aperiam odit ad laboriosam perferendis provident nisi et ex eum amet a, illo corporis impedit est inventore minus obcaecati atque suscipit eligendi delectus asperiores quod ipsam nobis beatae. Tempore aut vitae soluta quaerat, maxime temporibus nostrum adipisci, at ut aperiam libero harum commodi sunt illo architecto voluptas? Eaque perspiciatis eligendi necessitatibus tenetur quisquam, soluta fugit. Id eligendi sapiente omnis ducimus magnam quidem error mollitia possimus reprehenderit quos velit adipisci vitae, quia repellendus consequuntur cupiditate ullam et. Facere ipsam ab voluptatem enim, earum provident labore doloribus quasi! Laborum facilis minima molestias voluptates, in, inventore deserunt quibusdam distinctio numquam similique ad ratione, deleniti iure! Minima, amet mollitia veritatis rem sapiente harum voluptatem obcaecati repudiandae hic, at tempora, porro provident? Magni, beatae? Quidem accusamus nesciunt rerum laudantium voluptate sed incidunt rem vero numquam, perferendis, asperiores sunt unde? Animi dicta deserunt voluptatem, itaque illo error numquam velit mollitia est voluptatibus sapiente quis exercitationem dolores ab nihil excepturi officiis eos. Error iure sed doloremque nihil ipsum a fugit. Veniam maxime alias eaque provident dignissimos nesciunt sunt impedit voluptatibus iusto, quod voluptatum voluptates eos rem iste neque. Qui amet odio, doloremque aperiam laborum deserunt similique labore, consequatur nam quas debitis iusto, consequuntur ad fugit? Inventore recusandae optio cum quia officia dolor mollitia suscipit quasi! Deleniti quia consequatur maxime facilis.
+    <div className="about-page">
+      <div className="header">
+        <h1>About Our Job Portal</h1>
+      </div>
+
+      <div className="content">
+        <p className="title">Your gateway to a successful career journey ::__::</p>
+   
+        <p>
+          Welcome to our job portal, your gateway to an array of exciting career
+          opportunities. Our platform serves as a comprehensive hub connecting
+          talented individuals with diverse job listings across various
+          industries. With a user-centric approach, we aim to streamline the job
+          search process, ensuring both job seekers and employers find their
+          perfect match effortlessly.
+           <br />
+           <br />
+          At our job portal, we prioritize creating
+          an intuitive and efficient user experience. Job seekers can explore a
+          multitude of roles tailored to their preferences, empowering them to
+          discover opportunities aligned with their skills and aspirations. We
+          leverage advanced algorithms to provide personalized job
+          recommendations based on individual profiles and career preferences,
+          enhancing the chances of finding that ideal career fit. <br />
+<br />
+          For employers,
+          our platform offers access to a pool of qualified candidates,
+          facilitating seamless recruitment processes. We cater to the unique
+          needs of businesses by providing tools and resources to identify,
+          connect with, and onboard top talent, contributing to their
+          organizational growth and success.
+          <br />
+     
+          Join us on this journey towards
+          building careers and fostering partnerships that shape the future
+          workforce.
+        </p>
+      </div>
+
+      <div className="features">
+        <h2>Why Choose Our Job Portal?</h2>
+        <ul>
+          <li>
+            Explore a diverse range of job listings tailored to your
+            preferences.
+          </li>
+          <li>
+            User-friendly interface for a smooth and efficient job search
+            experience.
+          </li>
+          <li>
+            Receive personalized job recommendations based on your profile and
+            preferences.
+          </li>
+          <li>
+            Connect with top employers and access valuable career resources.
+          </li>
+        </ul>
+      </div>
+
+        <h2 className="meetOutTeam">Meet Our Team</h2>
+      <div className="team">
+        <div className="team-members">
+          <div className="team-member">
+            <img src="https://placehold.co/150x150" alt="Rashidul" />
+            <div className="member-info">
+              <h3>RASHIDUL ISLAM RASHED</h3>
+              <p>Founder & CEO</p>
+              <p>
+                With a vision to revolutionize the job market, John leads our
+                team with passion and determination.
+              </p>
+            </div>
+          </div>
+          <div className="team-member">
+            <img src="https://placehold.co/150x150" alt="Kausar" />
+            <div className="member-info">
+              <h3>KAUSAR AHAMED</h3>
+              <p>Founder & CEO</p>
+              <p>
+                With a vision to revolutionize the job market, John leads our
+                team with passion and determination.
+              </p>
+            </div>
+          </div>
+          <div className="team-member">
+            <img src="https://placehold.co/150x150" alt="Rashed" />
+            <div className="member-info">
+              <h3>RASHED ABDULLAH</h3>
+              <p>Founder & CEO</p>
+              <p>
+                With a vision to revolutionize the job market, John leads our
+                team with passion and determination.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
