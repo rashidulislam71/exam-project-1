@@ -9,18 +9,38 @@ import SignIn from './../Pages/Auth/SignIn/SignIn';
 import SignUp from './../Pages/Auth/Sign up/SignUp';
 import NotFound from './../Pages/NotFound/NotFound';
 
+import JobApply from './../Component/JobsComponent/JobApply/JobApply';
+import Favorite from './../Pages/Favorite/Favorite';
+import PrivateRouter from '../Component/PrivateRouter/PrivateRouter';
+import Error from './../Pages/error/Error';
+
+
 const routers = createBrowserRouter([
     {
-        path: "/",
         element: <App />,
+        errorElement: <NotFound/>,
         children:[
             {
                 path: "/",
-                element: <Home/>
+                element: <Home/>,
             },
             {
+                
                 path: "/jobs",
-                element: <Jobs />
+                element: <Jobs />,
+                loader: () => fetch("http://localhost:9000/jobs"),
+                errorElement: <Error />
+                
+            },
+            {
+                path: "/jobs/:jobId",
+                element: <JobApply />,
+                loader: ({params}) => fetch(`http://localhost:9000/jobs/${params.jobId}`),
+                errorElement: <Error />
+            },
+            {
+                path: "/favorite",
+                element: <Favorite />
             },
             {
                 path: "/about",
@@ -40,11 +60,7 @@ const routers = createBrowserRouter([
     {
         path: "/login",
         element: <SignIn />,
-    },
-    {
-        path: "*",
-        element: <NotFound />,
-    },
+    }
 
 ])
 

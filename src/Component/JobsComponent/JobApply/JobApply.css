@@ -1,0 +1,110 @@
+.job-details-container {
+    padding-block: 100px;
+    
+    background-color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.job-details {
+    max-width: 800px;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+    max-width: 220px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.header {
+    gap: 60px;
+    justify-content: start;
+    margin-bottom: 30px;
+}
+
+.company-info {
+    margin-left: 0px;
+}
+
+h1.companyNam {
+    margin-bottom: 0px;
+}
+
+h2.companyTitle {
+    margin: 5px 0;
+    font-size: 25px;
+    color: rgb(10, 32, 51);
+}
+
+.description {
+    margin-bottom: 20px;
+    
+}
+
+.description strong{
+    margin-left: 7px;
+    color: green;
+}
+
+.description h2{
+    color:cadetblue;
+    margin-left: 7px;
+}
+
+.description p{
+    margin-left: px;
+}
+
+
+.extra-details{
+    border-bottom: 1px solid rgb(210, 229, 233);
+    padding-bottom: 40px;
+    
+}
+
+.btn{
+    gap: 200px;
+    padding: 30px;
+}
+.btn .backBtn{
+    background-color: rgb(20, 143, 173);
+}
+.btn .applyBtn{
+    background-color: green;
+}
+.btn button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #d4e1e4;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.btn button:hover{
+    box-shadow:  none;
+}
+
+@media (max-width: 768px) {
+    .job-details {
+        width: 95%;
+    }
+
+    .company-logo {
+        max-width: 120px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+}

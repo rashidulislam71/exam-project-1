@@ -30,7 +30,7 @@ const Contact = () => {
               
               <input
                 type="email"
-                id="email"
+                id="ConEmail"
                 name="email"
                 placeholder="Your Email"
                 required

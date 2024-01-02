@@ -1,84 +1,53 @@
-import React from "react";
 import SocialSignUp from "../SocialSignUp/SocialSignUp";
 import "../../PagesCSS/Pages.css";
 import "../../../Component/MainLayout/Common/Common.css";
 import signUpImage from "../../../assets/images/sinup3.jpg";
 import { Link, useNavigate } from "react-router-dom";
-import auth from "../../../Firebase/Firebase.Config";
-
-import {
-  signInWithPopup,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-} from "firebase/auth";
 import {
   useCreateUserWithEmailAndPassword,
+  useSignInWithGithub,
+  useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
-import Loading from './../../../Component/Loading/Loading';
-import { ToastContainer, toast } from "react-toastify";
-
+import { toast } from "react-toastify";
+import auth from "../../../Firebase/Firebase.Config";
+import Loading from "../../../Component/Loading/Loading";
 
 
 const SignUp = () => {
 
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth, {
+      sendEmailVerification: true
+    });
   const navigate = useNavigate();
 
 
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth, {
-      sendEmailVerification: true,
-    });
+  // updating profile
+  const [updateProfile, updating] = useUpdateProfile(auth)
 
-  // updateProfile hook
-  const [updateProfile, updating] = useUpdateProfile(auth);
-
-  if (loading || updating) {
-    return <Loading />;
-  }
-
-  if(error){
-    return error
-  }
-
-  // Sign up with email and password
-  const signUpWithEmailAndPassword = async (e) => {
+  const signUpWithEmailPassword = async (e) => {
     e.preventDefault();
 
-    const fullName = e.target.fullName.value;
+    const username = e.target.fullName.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
 
-    console.log(fullName)
-    console.log(email)
-    console.log(password)
-    console.log(confirmPassword)
-
-    if (!fullName || !email || !password || !confirmPassword) {
-      return toast.error("Fill up the form before");
-    } 
-    else if (password !== confirmPassword) {
-      return toast.error("Password doesn't match!");
-    } 
-    else {
+    if (!username || !email || !password || !confirmPassword) {
+      toast.error("Field is empty");
+    } else if (password !== confirmPassword) {
+      toast.error("Password doesn't match!");
+    } else {
       await createUserWithEmailAndPassword(email, password);
-      await updateProfile({ displayName: fullName });
+      await updateProfile({ displayName: username });
+      toast.success("Sign Up successful!");
+      navigate("/");
     }
-    
   };
-
-  if(user){
-    navigate("/")
-  };
-
- 
-
-
 
   return (
     <div className="signUpPageParent">
-      <ToastContainer />
       <Link to="/">
         <div className="logo">
           <h1>HALALA RIJIK</h1>
@@ -105,38 +74,43 @@ const SignUp = () => {
           </div>
 
           <div className="formInfo">
-            <form onSubmit={signUpWithEmailAndPassword}>
+            <form onSubmit={signUpWithEmailPassword}>
               <input
+                className="signUpInput"
                 type="text"
-                name="fullName"
-                id="fullName"
                 placeholder="Full Name"
+                name="username"
+                id="fullName"
                 autoFocus
-              />{" "}
+              />
               <br />
               <input
+                className="signUpInput"
                 type="email"
+                placeholder="Email"
                 name="email"
                 id="email"
-                placeholder="Email"
-              />{" "}
+              />
               <br />
               <input
+                className="signUpInput"
                 type="password"
+                placeholder="Password"
                 name="password"
                 id="password"
-                placeholder="Password"
-              />{" "}
+              />
               <br />
               <input
+                className="signUpInput"
                 type="password"
+                placeholder=" Confirm Password"
                 name="confirmPassword"
                 id="confirmPassword"
-                placeholder="Confirm Password."
               />
-            <div className="submitBtn">
-              <button type="onsubmit" onSubmit={signUpWithEmailAndPassword}>REGISTRATION</button>
-            </div>
+              <br />
+              <div className="submitBtn">
+                <button>REGISTRATION</button>
+              </div>
             </form>
           </div>
           <SocialSignUp />

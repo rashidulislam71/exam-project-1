@@ -8,7 +8,8 @@
 
 /**-------Fonts--------**/
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@1,300;1,500&display=swap');
+
+
 
 /**-----Home start-------**/
 
@@ -29,8 +30,6 @@
 
 .bannerInfo {
     position: relative;
-    border-top: 5px solid goldenrod;
-
 }
 
 .bannerText {
@@ -58,6 +57,26 @@ h1.title {
     max-width: 455px;
 }
 
+
+button.homeDetailsBtn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  width: 100%;
+  border:none;
+  border-radius: 3px;
+  background-color: rgb(0, 119, 201);
+  color: white;
+  font-size: 17px;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+button.homeDetailsBtn:hover{
+  background: rgb(4, 109, 179);
+  box-shadow: none;
+}
+
 .ExploreNewBtn button {
     padding: 10px 20px;
     font-size: 18px;
@@ -69,154 +88,18 @@ h1.title {
     transition: .3s;
     border: none;
     outline: none;
-
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    transition: all .3s ease;
+    cursor: pointer;
 }
 
 .ExploreNewBtn button:hover {
-    background: rgb(39, 148, 221);
+    background: rgb(46, 149, 218);
+    box-shadow: none;
 }
 
 /**-------Job Section Start---------**/
-
-.jobsSection{
-    font-family: sans-serif;
-}
-
-.jobsSection .jobs{
-    margin: 0 auto;
-}
-
-.jobsSection .title{
-    text-align: center;
-}
-
-.jobsSection .title .bePositive{
-    font-size: 30px;
-    padding: 10px;
-    font-family: 'Noto Serif', sans-serif;
-    font-weight: 600;
-    color: rgb(90, 166, 222);
-    margin-bottom: 20px;
-}
-
-.jobsSection .title .determination{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,68,121,0.31976540616246496) 12%, rgba(0,212,255,1) 100%);
-  
-}
-.jobsSection .motivedForJob{
-    padding: 20px;
-    text-align: center;
-    line-height: 25px;
-    font-size: 17px;
-    color: #000000;
-}
-
-
-
-.fetchData{
-    font-family: 'Noto Serif', sans-serif;
-}
-
-.yourJobs h1{
-    text-align: center;
-    padding: 20px;
-    color: rgb(90, 166, 222);
-    outline: 1px solid;
-    font-size: 40px;
-    font-weight: 700;
-}
-.jobCardInfo.flex{
-    flex-wrap: wrap;
-    max-width: 100%;
-    justify-content: space-between;
-    padding: 40px;
-}
-
-.jobCard{
-    padding: 20px;
-    width: 400px;
-    background-color: #e7f0f1;;
-    text-align: center;
-    border-radius: 2px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-
-.jobCard .cImage{
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 700;
-    margin-right: 100px;
-    color: rgb(90, 166, 222);
-    text-align: left;
-   
-  }
-  
-  .jobCard .cImage img {
-    height: 65px;
-    width: 100px;
-    border: 2px solid;
-    border-radius: 3px;
-  }
-
-  .jobCard p {
-    font-size: 17px;
-    color: rgb(16, 53, 102);
-    text-align: left;
-  }
-  .jobCard p span{
-    color: rgb(50, 72, 102);
-    font-size: 20px;
-    font-style: italic;
-    border-bottom: 1px solid rgb(81, 95, 112);
-    
-  }
-  
-  .jobCard button {
-    text-align: center;
-    margin-top: 20px;
-    width: 70%;
-    padding: 10px 0px;
-    font-size: 18px;
-    border-radius: 3px;
-    background: rgb(11, 34, 65);
-    color: rgb(211, 227, 253);
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .jobCard button:hover {
-    background:rgb(42, 113, 207);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  }
-
-  .exploreAllJobBtn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-.exploreAllJobBtn button{
-        width: 300px;
-        padding: 10px 20px;
-        font-size: 18px;
-        border-radius: 2px;
-        background: rgb(0, 119, 201);
-        color: #fffcfc;
-        margin-block: 40px;
-        cursor: pointer;
-        transition: .3s;
-        border: none;
-        outline: none;
-    
-  } 
-
-
+  /* go JobsDetails component
 /**-------Job Section End---------**/
 
 /**-----Home End-------**/
@@ -415,9 +298,6 @@ input#confirmPassword {
 .gitBtn {
     background-color: #000;
 }
-
-
-
 
 /**-------Social End---------**/
 /**-----Sign Up End-------**/
@@ -684,7 +564,7 @@ label {
 }
 
 input#ConName,
-input#email
+input#ConEmail
 {
   margin-bottom: 20px;
   width: 100%;
@@ -722,7 +602,7 @@ textarea{
 
 .sendBtn button:hover {
   background-color: rgb(0, 119, 201);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
 }
 
 .jobs-paragraph {

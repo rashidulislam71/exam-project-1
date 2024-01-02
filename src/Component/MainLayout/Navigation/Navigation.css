@@ -8,16 +8,15 @@
 .navigation.flex{
     justify-content: space-between;
     padding: 10px 80px;
-    background:#E6E6FA;
-    opacity: 0.9;
-    height: 12%;
+    background:rgba(251, 254, 255, 0.829);
+    height: 70px;
     position: fixed;
     width: 100%;
     z-index: 10;
+    border-bottom: 5px solid rgb(12, 89, 109);
     
 }
     
-
 .navigation .navLogo{
     color: 	#4ae40e;
     font-family: sans-serif;
@@ -34,25 +33,25 @@
 }
 
 .navigation .menu a{
-    color: rgb(46, 25, 97);
+    color: rgb(15, 38, 68);
     font-family: sans-serif;
     text-decoration: none;
     transition: .2s;
 }
 
 .navigation .menu a:hover{
-    color: rgb(8, 52, 226);
+    color: rgb(8, 164, 226);
     text-decoration: underline;
     text-decoration-thickness: 2px;
 
 }
 
 .navigation .menu a.active{
-    color: rgb(47, 116, 243);
+    color: rgb(72, 192, 207);
 }
 
 a.active{
-    color: rgb(47, 116, 243);
+    color: rgba(198, 138, 216, 0.911);
 }
 
 .loginAndLogout{

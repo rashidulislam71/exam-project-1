@@ -2,61 +2,42 @@ import { VscGithubInverted } from "react-icons/vsc";
 import { IoLogoGoogleplus } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import {
-  GithubAuthProvider,
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
+  useSignInWithGithub,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+
 import auth from "../../../Firebase/Firebase.Config";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Loading from "../../../Component/Loading/Loading";
 
 const SocialSignUp = () => {
-  const provider = new GoogleAuthProvider();
-  const providerGit = new GithubAuthProvider();
   const navigate = useNavigate();
 
-  // Continue with google account function
-  const continueWithGoogleAccount = (e) => {
-    e.preventDefault();
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const user = result.user;
-        if (user) {
-          navigate("/");
-        }
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
-      });
-  };
+  const [signInWithGithub, githubUser, githubLoading, githubError] =
+    useSignInWithGithub(auth);
 
-  //Continue with GitHub Function
-  const continueWithGitHub = (e) => {
-    e.preventDefault();
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
 
-    signInWithPopup(auth, providerGit)
-      .then((result) => {
-        const credential = GithubAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const user = result.user;
-        if (user) {
-          navigate("/");
-        }
-      })
+  if (googleLoading || githubLoading) {
+    <Loading />;
+  }
 
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GithubAuthProvider.credentialFromError(error);
-      });
-  };
+  if (googleError || githubError) {
+    <p style={{ color: "red" }}>
+      Error: {googleError?.message} {githubError?.message}
+    </p>;
+  }
+
+  if (googleUser || githubUser) {
+    navigate(`/`)
+    return toast.success(`Log In Successfully`);
+  }
 
   return (
     <div>
+      <ToastContainer />
       <div className="socialSignUpInfo">
         <div className="or flex">
           <hr />
@@ -68,7 +49,7 @@ const SocialSignUp = () => {
               <IoLogoGoogleplus />
             </div>
             <div className="text">
-              <button onClick={continueWithGoogleAccount} className="googleBtn">
+              <button onClick={() => signInWithGoogle()} className="googleBtn">
                 Continue With Google
               </button>
             </div>
@@ -79,7 +60,7 @@ const SocialSignUp = () => {
               <VscGithubInverted />
             </div>
             <div className="text">
-              <button onClick={continueWithGitHub} className="gitBtn">
+              <button onClick={() => signInWithGithub()} className="gitBtn">
                 Continue With GitHub
               </button>
             </div>

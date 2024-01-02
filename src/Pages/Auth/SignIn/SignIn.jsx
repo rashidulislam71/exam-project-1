@@ -1,19 +1,16 @@
-import React, { useState } from "react";
 import SocialSignUp from "./../SocialSignUp/SocialSignUp";
 import { Link, useNavigate } from "react-router-dom";
 import LogInImage from "../../../assets/images/login4_prev_ui.png";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import Loading from "./../../../Component/Loading/Loading";
-import auth from "./../../../Firebase/Firebase.Config";
-import AuthError from './../AuthError/AuthError';
+
 import { ToastContainer, toast } from "react-toastify";
+import {
+  useSignInWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import Loading from "./../../../Component/Loading/Loading";
+import auth from "../../../Firebase/Firebase.Config";
 
 const SignIn = () => {
-
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-
   const navigate = useNavigate();
 
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -23,25 +20,23 @@ const SignIn = () => {
     return <Loading />;
   }
 
-  // Log in function
   const loginHandling = async (e) => {
     e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    if (!email) {
-      return toast.error("Email filed empty!");
-    }
-    else if(!password) {
-      return toast.error("Password filed empty!")
-    }
-    else {
+    console.log(email);
+    console.log(password);
+    if (!email || !password) {
+      return alert("email or password doesn't match!");
+    } else {
       await signInWithEmailAndPassword(email, password);
+      if (user) {
+        navigate("/");
+        toast.success("Log in successfully!");
+      }
     }
-    
   };
-  if (user) {
-    navigate("/");
-  }
-  
 
   return (
     <div>
@@ -79,8 +74,7 @@ const SignIn = () => {
                 <p>
                   Create a New Free Account?
                   <Link to="/signup">
-                    {" "}
-                    <span>Registration</span>{" "}
+                    <span>Registration</span>
                   </Link>
                 </p>
               </div>
@@ -93,8 +87,6 @@ const SignIn = () => {
                   placeholder="Email"
                   name="email"
                   id="email"
-                  value={email}
-                  onChange={(e)=> setEmail(e.target.value)}
                   autoFocus
                   required
                 />{" "}
@@ -104,22 +96,27 @@ const SignIn = () => {
                   placeholder="Password"
                   name="password"
                   id="password"
-                  value={password}
-                  onChange={(e)=> setPassword(e.target.value)}
                   required
                 />{" "}
                 <br />
-                {
-                  error ? <p style={{color: "red"}}>Email or Password does not match!</p> : ""
-                }
+                {error ? (
+                  <p style={{ color: "red" }}>
+                    Email or Password does not match!
+                  </p>
+                ) : (
+                  ""
+                )}
                 <div className="submitBtn">
-                  <button onClick={loginHandling}>LOGIN</button>
+                  <button type="submit">LOGIN</button>
                 </div>
               </form>
             </div>
             <SocialSignUp />
           </div>
         </div>
+        <Link to="/">
+          <button>Go Home</button>
+        </Link>
       </div>
     </div>
   );

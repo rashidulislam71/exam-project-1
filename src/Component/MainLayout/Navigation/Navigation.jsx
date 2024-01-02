@@ -8,6 +8,7 @@ import { signOut } from "firebase/auth";
 
 const Navigation = () => {
   const [user] = useAuthState(auth);
+  console.log(user)
 
   const logout = () => {
     signOut(auth);
@@ -25,6 +26,7 @@ const Navigation = () => {
         <div className="menu flex">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/jobs">JOBS</NavLink>
+          <NavLink to="/favorite">FAVORITE</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
 
@@ -45,7 +47,7 @@ const Navigation = () => {
                   color: "rgb(254, 94, 1)",
                 }}
               >
-                {user?.displayName}
+                {user ?.displayName}
               </span>
             ) : (
               <NavLink to="/signup">SIGN UP</NavLink>

@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
 import "../PagesCSS/Pages.css";
 import bannerImage from "../../assets/images/banner3.jpg";
-import { Link } from "react-router-dom";
-import useFetchData from "./../../Component/useFetchData/useFetchData";
+import { Link, useLoaderData } from "react-router-dom";
 import Loading from "./../../Component/Loading/Loading";
+import { useEffect, useState } from "react";
+import useFetchData from './../../Component/useFetchData/useFetchData';
 
 function Home() {
+  
   const { data, loading, error } = useFetchData("http://localhost:9000/jobs");
-  const sliceData = data.slice(0, 6);
 
-  if (loading) {
-    return <Loading />;
-  }
+  const sliceJobs = data.slice(0,6)
 
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
 
   return (
     <div>
@@ -34,11 +29,11 @@ function Home() {
                   exciting opportunities and fulfilling careers.
                 </p>
               </div>
-              <Link to="/login">
                 <div className="ExploreNewBtn">
+              <Link to="/signup">
                   <button>Explore Now.......</button>
-                </div>
               </Link>
+                </div>
             </div>
           </div>
         </div>
@@ -68,37 +63,47 @@ function Home() {
               </p>
             </div>
           </div>
-          <hr />
+          
+
           <div className="fetchData">
             <div className="yourJobs">
               <h1>Your Jobs:</h1>
             </div>
-            <ul className="jobCardInfo flex">
-              {sliceData.map((value) => (
-                <div key={value.id}>
-                  <div key={value.id} className="jobCard">
-                    <span className="cImage">
-                      {<img src={value.logo} alt="" />}
+            {!loading ? (
+              <ul className="jobCardInfo flex">
+                {sliceJobs.map((value) => (
+                  <div key={value.id}>
+                    <div className="jobCard">
+                      <span className="cImage">
+                        {<img src={value.logo} alt="" />}
 
-                      {value.companyName}
-                    </span>
-                    <hr />
-                    <p>
-                      <span>Title: </span>
-                      {value.title}
-                    </p>
-                    <p>
-                      <span>Position: </span>
-                      {value.position}
-                    </p>
+                        {value.companyName}
+                      </span>
+                      <hr />
+                      <p>
+                        <span>Title: </span>
+                        {value.title}
+                      </p>
+                      <p>
+                        <span>Position: </span>
+                        {value.position}
+                      </p>
+                      <p>
+                        <span>Description: </span>
+                        {value.description}
+                      </p>
 
-                    <Link to="/jobs">
-                      <button>Details</button>
-                    </Link>
+                      <Link to={`/jobs/${value.id}`}>
+                        <button className="homeDetailsBtn">Details</button>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </ul>
+                ))}
+              </ul>
+             ) : (
+              <Loading /> 
+            )} 
+
             <div className="exploreAllJobBtn">
               <Link to="/jobs">
                 <button>Explore All Job........... </button>

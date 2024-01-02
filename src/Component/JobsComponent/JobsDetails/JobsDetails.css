@@ -1,0 +1,177 @@
+.jobsSection {
+    font-family: 'Noto Serif', sans-serif;
+}
+
+.jobsSection .jobs {
+    margin: 0 auto;
+}
+
+.jobsSection .title {
+    text-align: center;
+}
+
+.jobsSection .title .bePositive {
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Noto Serif', sans-serif;
+    font-weight: 600;
+    color: rgb(90, 166, 222);
+    margin-bottom: 20px;
+}
+
+.jobsSection .title .determination {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 68, 121, 0.31976540616246496) 12%, rgba(0, 212, 255, 1) 100%);
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    padding: 5px;
+
+}
+
+.jobsSection .motivedForJob {
+    padding: 20px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    color: #000000;
+}
+
+.fetchData {
+    font-family: 'Noto Serif', sans-serif;
+}
+
+.yourJobs h1 {
+    text-align: center;
+    color: rgb(90, 166, 222);
+    margin-block: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+
+.jobCardInfo.flex {
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.jobCard {
+    padding: 15px;
+    width: 420px;
+    background-color: #e7f0f1;
+    ;
+    text-align: center;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+
+.jobCard .cImage {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 100px;
+    color: rgb(90, 166, 222);
+    text-align: left;
+
+}
+
+.jobCard .cImage img {
+    height: 65px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 3px;
+}
+
+.jobCard p {
+    font-size: 17px;
+    color: rgb(16, 53, 102);
+    text-align: left;
+    line-height: 17px;
+}
+
+.jobCard p span {
+    color: rgb(32, 83, 155);
+    font-size: 20px;
+
+}
+
+/**-------Button section--------**/
+
+.jobBtn {
+    justify-content: space-between;
+}
+
+.jobCard .jobBtn button {
+    background: #91d7ec;
+    color: rgb(11, 20, 32);
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+
+}
+
+.jobBtn button:hover {
+    box-shadow: 3px 3px 10px rgb(167, 202, 199);
+}
+
+.jobCard a {
+    text-decoration: none;
+}
+
+.jobCard .applyBtn,
+.jobBtn button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 3px;
+    background: rgb(82, 153, 68);
+    color: rgb(211, 227, 253);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+
+}
+
+.jobCard .applyBtn:hover {
+
+    box-shadow: 3px 3px 10px rgb(211, 224, 245);
+}
+
+.exploreAllJobBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exploreAllJobBtn button {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 2px;
+    background: rgb(0, 119, 201);
+    color: #fffcfc;
+    margin-block: 40px;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+    outline: none;
+    transition: all .3s ease;
+    cursor: pointer;
+
+}
+
+.exploreAllJobBtn button:hover {
+    box-shadow: 3px 3px 10px rgb(211, 224, 245);
+}
