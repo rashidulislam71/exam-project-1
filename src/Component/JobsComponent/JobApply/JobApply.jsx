@@ -1,65 +1,69 @@
-
-
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import "./JobApply.css";
-
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
+import { GlobalContext } from "../../GlobalContext/GlobalContext";
+import Loading from "../../Loading/Loading";
 
 const JobApply = () => {
+  
+  const { jobId } = useParams();
+  const { jobData } = useContext(GlobalContext);
+  const job = jobData.find((j) => j.id === parseInt(jobId));
 
-    const navigate = useNavigate()
-    
-    const goBackHandling = ()=>{
-        navigate(-1)
-    }
+  if(!job){
+    return <Loading />
+  }
 
-  const {
-    description,
-    logo,
-    position,
-    title,
-    companyName,
-    requirements,
-    responsibilities,
-    location,
-    salaryPerMonth,
-  } = useLoaderData();
+  const navigate = useNavigate();
+  const goBackHandling = ()=> {
+    navigate(-1)
+  }
+
 
   return (
     <div>
       <div className="job-details-container flex">
         <div className="job-details">
-          <div className="header flex">
-            <img src={logo} alt={companyName} className="company-logo" />
+          <div  className="header flex">
+            <img
+              src={job.logo}
+              alt={job.companyName}
+              className="company-logo"
+            />
             <div className="company-info">
-              <h1 className="companyNam">{companyName}</h1>
-              <h2 className="companyTitle">{title}</h2>
+              <h1 className="companyNam">{job.companyName}</h1>
+              <h2 className="companyTitle">{job.title}</h2>
             </div>
           </div>
           <div className="description">
             <strong>Position:</strong>
-            <h2>{position}</h2>
-            <p>{description}</p>
+            <h2>{job.position}</h2>
+            <p>{job.description}</p>
           </div>
           <div className="extra-details">
             <p>
-              <strong>Responsibilities:</strong> {responsibilities}
+              <strong>Responsibilities:</strong> {job.responsibilities}
             </p>
             <p>
-              <strong>Requirements:</strong> {requirements}
+              <strong>Requirements:</strong> {job.requirements}
             </p>
             <p>
-              <strong>Location:</strong> {location}
+              <strong>Location:</strong> {job.location}
             </p>
             <p>
-              <strong>Salary Per Month:</strong> {salaryPerMonth}
+              <strong>Salary Per Month:</strong> {job.salaryPerMonth}
             </p>
           </div>
+
           <div className="btn flex">
-            <button onClick={goBackHandling} className="backBtn">Go Back</button>
+            <button onClick={goBackHandling}  className="backBtn">
+              
+              Go Back
+            </button>
             <button className="applyBtn">APPLY NOW</button>
+          </div>
         </div>
-        </div>
-        
       </div>
     </div>
   );

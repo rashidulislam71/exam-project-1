@@ -1,11 +1,14 @@
+import React from "react";
+import MainLayout from "./Component/MainLayout/MainLayout/MainLayout";
+import { GlobalProvider } from "./Component/GlobalContext/GlobalContext";
 
-import React from 'react';
-import MainLayout from './Component/MainLayout/MainLayout/MainLayout';
 
 const App = () => {
   return (
     <div>
-      <MainLayout />
+      <GlobalProvider>
+        <MainLayout />
+      </GlobalProvider>
     </div>
   );
 };

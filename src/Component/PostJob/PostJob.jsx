@@ -1,8 +1,13 @@
 import axios from "axios";
 import "./PostJob.css";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import { GlobalContext } from "../GlobalContext/GlobalContext";
 
 const PostJob = () => {
+
+  const { addJob } = useContext(GlobalContext);
+
   const [jobPost, setJobPost] = useState({
     companyName: "",
     title: "",
@@ -10,7 +15,6 @@ const PostJob = () => {
     description: "",
     companyLogo: "",
   });
-  console.log(jobPost);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,31 +24,36 @@ const PostJob = () => {
     }));
   };
 
-  const url = `http://localhost:9000/jobs`;
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post(url, jobPost).then((response) => {
-      setJobPost(response.data);
+    try {
+      await addJob(jobPost); 
       setJobPost({
-      companyName : "",
-      title : "",
-      position : "",
-      description : "",
+        companyName: "",
+        title: "",
+        position: "",
+        description: "",
+        companyLogo: "",
+      });
+      toast.success("Job posted successfully!");
+    } catch (error) {
+      console.error("Error posting job:", error);
+      toast.error("Failed to post job.");
+    }
+  };
+
+  const cancelJobPost = () => {
+    setJobPost({
+      companyName: "",
+      title: "",
+      position: "",
+      description: "",
       companyLogo: "",
-    })
     });
   };
 
-  const cancelJobPost = () =>{
-    setJobPost({
-        companyName : "",
-        title : "",
-        position : "",
-        description : "",
-        companyLogo: "",
-      })
-  };
 
+ 
   return (
     <div className="jobPostParent">
       <div className="job-post-container">
@@ -94,7 +103,6 @@ const PostJob = () => {
               value={jobPost.companyLogo}
               onChange={handleChange}
               className="job-post-input"
-           
             />
           </label>
 
@@ -108,10 +116,13 @@ const PostJob = () => {
               required
             />
           </label>
-          
 
           <div className="job-post-buttons flex">
-            <button type="button" onClick={cancelJobPost} className="job-post-cancel-button">
+            <button
+              type="button"
+              onClick={cancelJobPost}
+              className="job-post-cancel-button"
+            >
               Cancel
             </button>
             <button type="submit" className="job-post-submit-button">

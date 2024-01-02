@@ -1,16 +1,13 @@
-// import "../../Pages/PagesCSS/Pages.css";
+
+
 import "../../JobsComponent/JobsDetails/JobsDetails.css";
 import Loading from "../../Loading/Loading";
-import { Link, useParams } from "react-router-dom";
-import { MdFavoriteBorder } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-const JobsDetails = ({ data }) => {
-
-  const params = useParams()
+const JobsDetails = ({ data, deleteJobPost }) => {
 
   if(!data){
-    return null,
-    <Loading />
+    return <Loading />
   };
   
   const { id, title, companyName, logo, position, description } = data;
@@ -18,6 +15,7 @@ const JobsDetails = ({ data }) => {
 
   return (
     <div>
+      
       <div className="jobCard">
         <span className="cImage">
           {<img src={logo} alt="" />}
@@ -39,7 +37,7 @@ const JobsDetails = ({ data }) => {
 
         <div className="jobBtn flex">
           <Link to="/jobs">
-            <button>Delete</button>
+            <button onClick={()=>deleteJobPost(id)}>Delete</button>
           </Link>
           <Link to="/jobs">
             <button>Favorite</button>
@@ -50,7 +48,7 @@ const JobsDetails = ({ data }) => {
           </Link>
         </div>
         <Link to={`/jobs/${id}`}>
-          <button className="applyBtn">DETAILS & APPLY</button>
+          <button  className="applyBtn">DETAILS & APPLY</button>
         </Link>
       </div>
     </div>

@@ -9,7 +9,6 @@ import logo1 from "../../../assets/images/LOGO3.png"
 
 const Navigation = () => {
   const [user] = useAuthState(auth);
-  console.log(user)
 
   const logout = () => {
     signOut(auth);
@@ -29,6 +28,7 @@ const Navigation = () => {
           <NavLink to="/favorite">FAVORITE</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
+          <NavLink to="/show">show</NavLink>
          
 
           <div className="userInfo flex">

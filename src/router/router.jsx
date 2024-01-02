@@ -14,6 +14,8 @@ import Favorite from './../Pages/Favorite/Favorite';
 import PrivateRouter from '../Component/PrivateRouter/PrivateRouter';
 import Error from './../Pages/error/Error';
 import PostJob from '../Component/PostJob/PostJob';
+import axios from 'axios';
+
 
 
 const routers = createBrowserRouter([
@@ -29,14 +31,14 @@ const routers = createBrowserRouter([
                 
                 path: "/jobs",
                 element: <Jobs />,
-                loader: () => fetch("http://localhost:9000/jobs"),
+                loader: () => axios.get("http://localhost:9000/jobs"),
                 errorElement: <Error />
                 
             },
             {
                 path: "/jobs/:jobId",
                 element: <JobApply />,
-                loader: ({params}) => fetch(`http://localhost:9000/jobs/${params.jobId}`),
+                loader: ({params}) => axios.get(`http://localhost:9000/jobs/${params.jobId}`),
                 errorElement: <Error />
             },
             {
@@ -62,7 +64,8 @@ const routers = createBrowserRouter([
             {
                 path: "/postJobs",
                 element: <PostJob />
-            }
+            },
+   
            
         ]
     }
