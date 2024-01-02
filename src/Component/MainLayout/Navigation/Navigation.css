@@ -2,7 +2,7 @@
 
 
 .navigationParent{
- 
+    
 }
 
 .navigation.flex{
@@ -18,12 +18,18 @@
 }
     
 .navigation .navLogo{
-    color: 	#4ae40e;
-    font-family: sans-serif;
+    color: rgb(13, 107, 109);
     font-weight: 800;
     padding: 10px 0px;
     cursor: pointer;
-   
+    gap: 1.5px;
+}
+
+.navigation .navLogo img,
+.footerLogo
+{
+    height: 60px;
+    width: 60px;
 }
 
 .navigation .menu.flex{

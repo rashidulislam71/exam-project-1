@@ -5,7 +5,6 @@ import LogInImage from "../../../assets/images/login4_prev_ui.png";
 import { ToastContainer, toast } from "react-toastify";
 import {
   useSignInWithEmailAndPassword,
-  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import Loading from "./../../../Component/Loading/Loading";
 import auth from "../../../Firebase/Firebase.Config";
@@ -42,12 +41,6 @@ const SignIn = () => {
     <div>
       <ToastContainer />
       <div className="signUpPageParent">
-        <Link to="/">
-          <div className="logo">
-            <h1>HALAL JIBIKA</h1>
-          </div>
-        </Link>
-
         <div className="signInPageInfo flex">
           <div className="motivation">
             <div className="LogInImage">
@@ -114,9 +107,6 @@ const SignIn = () => {
             <SocialSignUp />
           </div>
         </div>
-        <Link to="/">
-          <button>Go Home</button>
-        </Link>
       </div>
     </div>
   );

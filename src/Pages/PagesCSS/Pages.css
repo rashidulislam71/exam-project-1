@@ -16,12 +16,14 @@
 .homePage,
 .favoriteSection,
 .jobsSection,
+.favoriteSection,
 .about-page,
 .contactPage {
     height: auto;
     padding-top: 70px;
     font-family: 'Noto Serif', sans-serif;
     font-weight: 300;
+    background-color: rgb(225, 238, 235);
 }
 
 .heroSection {
@@ -88,14 +90,13 @@ button.homeDetailsBtn:hover{
     transition: .3s;
     border: none;
     outline: none;
-    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
     transition: all .3s ease;
     cursor: pointer;
 }
 
 .ExploreNewBtn button:hover {
     background: rgb(46, 149, 218);
-    box-shadow: none;
+    box-shadow: 3px 3px 15px rgb(91, 102, 109);
 }
 
 /**-------Job Section Start---------**/
@@ -112,44 +113,37 @@ button.homeDetailsBtn:hover{
 .signUpPageParent {
     height: auto;
     margin: 0 auto;
-}
-
-.signUpPageParent a {
-    text-decoration: none;
-}
-
-.logo h1 {
-    color: 	rgb(9, 25, 51);
-    padding: 10px 100px;
-    cursor: pointer;
-    
+    padding-top: 70px;
 }
 
 .SigUpImage img {
-    height: 500px;
+    height: 610px;
     width: 630px;
-    box-shadow: 1px 1px 10px white;
-    border: 3px solid rgb(153, 150, 150);
-    border-radius: 8px 100px;
-    outline: 1px solid #00bfff;
-    outline-offset: 10px;
+    box-shadow: 3px 3px 20px rgb(153, 150, 150);
+    opacity: 0.8;
+    border-radius: 4px;
+    outline: 1px solid rgb(133, 221, 221);
+    outline-offset: 7px;
+    
 }
 
 
 
 .signUpPageInfo.flex,
 .signInPageInfo.flex {
-    gap: 100px;
+    justify-content: space-around;
     position: relative;
+    background-color: rgb(225, 238, 235);
+    padding: 30px;
 }
 
 .signUpForm {
-    margin: 20px 0;
+    margin: 0px 0;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 4px;
     width: 450px;
     z-index: 1;
-    border: 1px solid rgb(184, 182, 182);
+    box-shadow: 3px 3px 20px rgb(69, 103, 104);
 }
 
 .signUpForm .title {}
@@ -157,7 +151,7 @@ button.homeDetailsBtn:hover{
 .signUpForm .title h1 {
     text-align: center;
     font-size: 33px;
-    color: rgb(102, 105, 103);
+    color: rgb(33, 126, 126);
 }
 
 hr {
@@ -174,22 +168,16 @@ hr {
 
 .haveAccount p span {
     font-size: 25px;
-    color: #00008B;
+    color: #003c8b;
     cursor: pointer;
     transition: all ease .2s;
+    text-decoration: none;
 
 }
 
 .haveAccount p span:hover {
-    color: #0000CD;
+    color: #0654ad;
     text-decoration: underline;
-}
-
-.formInfo {}
-
-label {
-    font-size: 20px;
-    color: rgb(54, 53, 53);
 }
 
 input#fullName,
@@ -197,10 +185,10 @@ input#email,
 input#password,
 input#confirmPassword {
     width: 100%;
-    padding: 6px 2px;
-    margin: 0px 0px 20px 0px;
-    outline: none;
+    padding: 6px 10px;
+    margin: 0px 0px 10px 0px;
     border: none;
+    outline-color: rgb(156, 212, 173);
     border-bottom: 1px solid rgb(184, 182, 182);
     font-size: 18px;
     color: rgb(54, 52, 52);
@@ -209,7 +197,7 @@ input#confirmPassword {
 .submitBtn {}
 
 .submitBtn button {
-    margin-top: 25px;
+    margin-top: 0px;
     padding: 10px 10px;
     width: 100%;
     border: none;
@@ -217,12 +205,12 @@ input#confirmPassword {
     font-size: 18px;
     cursor: pointer;
     transition: all ease .2s;
-    background-color: rgb(35, 53, 221);
+    background-color: rgb(35, 137, 221);
     color: white;
 }
 
 .submitBtn button:hover {
-    background-color: rgb(43, 62, 236);
+    background-color: rgb(31, 127, 206);
     box-shadow: 3px 3px 10px rgb(92, 142, 216);
 }
 

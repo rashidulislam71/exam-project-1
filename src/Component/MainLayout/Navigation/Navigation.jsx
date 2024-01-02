@@ -5,6 +5,7 @@ import "../Common/Common.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/Firebase.Config";
 import { signOut } from "firebase/auth";
+import logo1 from "../../../assets/images/LOGO3.png"
 
 const Navigation = () => {
   const [user] = useAuthState(auth);
@@ -17,10 +18,9 @@ const Navigation = () => {
   return (
     <div className="navigationParent">
       <div className="navigation flex">
-        <div className="navLogo">
-          <h1>
-            HALAL <span>JIBIKA</span>
-          </h1>
+        <div className="navLogo flex">
+        <img src={logo1} alt="LOGO" />
+        <h3>HALAL JIBIKA</h3>
         </div>
 
         <div className="menu flex">
@@ -29,6 +29,7 @@ const Navigation = () => {
           <NavLink to="/favorite">FAVORITE</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
+         
 
           <div className="userInfo flex">
             {user ? (

@@ -13,6 +13,7 @@ import JobApply from './../Component/JobsComponent/JobApply/JobApply';
 import Favorite from './../Pages/Favorite/Favorite';
 import PrivateRouter from '../Component/PrivateRouter/PrivateRouter';
 import Error from './../Pages/error/Error';
+import PostJob from '../Component/PostJob/PostJob';
 
 
 const routers = createBrowserRouter([
@@ -50,17 +51,22 @@ const routers = createBrowserRouter([
                 path: "/contact",
                 element: <Contact />
             },
+            {
+                path: "/signup",
+                element: <SignUp />,
+            },
+            {
+                path: "/login",
+                element: <SignIn />,
+            },
+            {
+                path: "/postJobs",
+                element: <PostJob />
+            }
            
         ]
-    },
-    {
-        path: "/signup",
-        element: <SignUp />,
-    },
-    {
-        path: "/login",
-        element: <SignIn />,
     }
+ 
 
 ])
 

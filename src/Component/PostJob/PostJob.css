@@ -1,0 +1,120 @@
+
+
+.jobPostParent{
+  background-color: #e0ebee;
+}
+
+.job-post-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    padding-top: 150px;
+    
+  }
+  
+h1.job-post-title{
+  text-align: center;
+  color: #48C0D8;
+  margin-block: -20px  30px;
+  border-bottom: 1px solid ;
+}
+
+  .job-post-form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 3px 3px 20px #2d4c53 ;
+    margin-bottom: 40px;
+  }
+  
+  .job-post-label {
+    margin: 10px 0;
+    text-align: left;
+    width: 100%;
+    color: #224c55;
+  }
+  
+  .job-post-input,
+  .job-post-textarea {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    outline-color: rgb(142, 221, 142);
+  }
+  
+  .job-post-textarea {
+    min-height: 100px;
+  }
+  
+  .job-post-buttons {
+   justify-content: space-between;
+   gap: 150px;
+  }
+  
+  .job-post-submit-button,
+  .job-post-cancel-button {
+    background-color: #229993;
+    color: white;
+    padding:10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 150px;
+    transition: all .3s ease;
+  }
+
+  .job-post-submit-button:hover,
+  .job-post-cancel-button:hover
+  {
+    box-shadow: 3px 3px 10px #0f3331;
+  }
+  
+  /* Responsive Design using Media Queries */
+  @media screen and (max-width: 768px) {
+    .job-post-container {
+      padding: 10px;
+    }
+  
+    .job-post-input,
+    .job-post-textarea {
+      padding: 8px;
+    }
+  
+    .job-post-submit-button,
+    .job-post-cancel-button {
+      padding: 10px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 480px) {
+    .job-post-input,
+    .job-post-textarea {
+      font-size: 14px;
+    }
+  
+    .job-post-submit-button,
+    .job-post-cancel-button {
+      font-size: 16px;
+    }
+    .job-post-buttons {
+      justify-content: space-between;
+      gap: 20px;
+     }
+     
+     .job-post-submit-button,
+     .job-post-cancel-button {
+       background-color: #229993;
+       color: white;
+       padding:10px 20px;
+       font-size: 18px;
+       width: fit-content;
+     
+     }
+  }

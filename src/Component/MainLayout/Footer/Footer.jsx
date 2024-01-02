@@ -6,14 +6,19 @@ import { FaSquareTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 import { MdMarkEmailUnread } from "react-icons/md";
+import logo1 from "../../../assets/images/LOGO3.png"
 
 const Footer = () => {
   return (
     <div className="footerSection">
       <footer className="footer">
-        <h1 className="footerLogo">HALAL JIBIKA</h1>
+        <div className="navLogo footerLogo ">
+          <img src={logo1} alt="HALAL JIBIKA" />
+        </div>
+        
+        {/* <h1 className="footerLogo">HALAL JIBIKA</h1> */}
         <div className="footer-column">
-          {/* Contact Us */}
+          
           <h2>Contact Us</h2>
           <div className="social-icons">
             <a href="#" target="_blank">

@@ -20,8 +20,12 @@ const SignUp = () => {
     useCreateUserWithEmailAndPassword(auth, {
       sendEmailVerification: true
     });
+    
   const navigate = useNavigate();
 
+  if(loading){
+    return <Loading />
+  };
 
   // updating profile
   const [updateProfile, updating] = useUpdateProfile(auth)
@@ -48,12 +52,6 @@ const SignUp = () => {
 
   return (
     <div className="signUpPageParent">
-      <Link to="/">
-        <div className="logo">
-          <h1>HALALA RIJIK</h1>
-        </div>
-      </Link>
-
       <div className="signUpPageInfo flex">
         <div className="SigUpImage">
           <img src={signUpImage} alt="" />
@@ -66,7 +64,6 @@ const SignUp = () => {
               <p>
                 Already Have An Account?
                 <Link to="/login">
-                  {" "}
                   <span>Log In</span>{" "}
                 </Link>
               </p>

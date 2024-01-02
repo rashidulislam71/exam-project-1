@@ -11,7 +11,7 @@ const JobsDetails = ({ data }) => {
   if(!data){
     return null,
     <Loading />
-  }
+  };
   
   const { id, title, companyName, logo, position, description } = data;
 
