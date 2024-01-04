@@ -3,6 +3,7 @@ import "../../Component/MainLayout/Common/Common.css";
 import "../../Component/JobsComponent/JobApply/JobApply.css";
 import "../../Component/JobsComponent/JobsDetails/JobsDetails.css";
 import "../../Component/PostJob/PostJob.css";
+
 import Loading from "./../../Component/Loading/Loading";
 import { Link } from "react-router-dom";
 import JobsDetails from "../../Component/JobsComponent/JobsDetails/JobsDetails";

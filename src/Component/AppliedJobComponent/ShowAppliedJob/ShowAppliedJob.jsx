@@ -1,7 +1,6 @@
 
 import "../../MainLayout/Common/Common.css"
 import "../AppliedJob/AppliedJob.css"
-import "../ShowAppliedJob/ShowAppliedJob.css"
 import "../../JobsComponent/JobApply/JobApply.css"
 import "../../JobsComponent/JobsDetails/JobsDetails.css"
 
