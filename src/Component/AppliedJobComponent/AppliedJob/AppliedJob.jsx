@@ -1,5 +1,5 @@
 
-
+import "./AppliedJob.css"
 
 import React, { useContext } from "react";
 import ShowAppliedJob from "../ShowAppliedJob/ShowAppliedJob";
@@ -19,7 +19,7 @@ const Favorite = () => {
         <div className="jobsListCard">
           <ul className="jobCardInfo-job flex">
             {appliedJob.length === 0 ? (
-              <h1 className="appliedJob">Applied Jobs Not Found!</h1>
+              <h1 className="appliedJobNot">Empty!</h1>
             ) : (
               appliedJob.map((value) => (
                 <div key={value.id}>

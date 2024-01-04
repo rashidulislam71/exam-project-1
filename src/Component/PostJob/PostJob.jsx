@@ -59,12 +59,12 @@ const PostJob = () => {
       });
       setIsEditing(false);
       navigate("/jobs");
-      toast.success(
-        isEditing ? "Job updated successfully!" : "Job posted successfully!"
+      
+      toast.success(isEditing ? "Job updated successfully!" : "Job posted successfully!"
       );
     } catch (error) {
       console.error("Error posting/updating job:", error);
-      toast.error(`Failed to ${isEditing ? "update" : "post"} job.`);
+      toast.error(`Failed to ${isEditing ? "Update" : "Post"} job.`);
     }
   };
 

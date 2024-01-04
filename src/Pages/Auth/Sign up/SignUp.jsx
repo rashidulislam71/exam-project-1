@@ -1,5 +1,8 @@
+
+
+import "./SignUp.css"
+
 import SocialSignUp from "../SocialSignUp/SocialSignUp";
-import "../SignUpSignInCSS//SignUpSignIn.css";
 import signUpImage from "../../../assets/images/sinup3.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -53,7 +56,7 @@ const SignUp = () => {
     <div className="signUpPageParent">
       <div className="signUpPageInfo flex">
         <div className="SigUpImage">
-          <img src={signUpImage} alt="" />
+          {/* <img src={signUpImage} alt="" /> */}
         </div>
         <div className="signUpForm">
           <div className="title">

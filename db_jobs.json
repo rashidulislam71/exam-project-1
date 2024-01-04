@@ -1,0 +1,145 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Google Internship Program",
+      "logo": "https://picsum.photos/200",
+      "companyName": "Google",
+      "position": "Intern Developer",
+      "description": "This is an internship opportunity from Google",
+      "responsibilities": "Assist in software development projects. Collaborate with team members on coding tasks. Participate in code reviews.",
+      "requirements": "Pursuing a degree in Computer Science or related field. Programming skills in languages like Python, Java, or C++. Strong problem-solving abilities.",
+      "location": "Mountain View, CA",
+      "salaryPerMonth": "$4,000"
+    },
+    {
+      "id": 2,
+      "title": "Facebook Junior Development Program",
+      "logo": "https://picsum.photos/200",
+      "companyName": "Facebook",
+      "position": "Junior Developer",
+      "description": "This is a junior developer recruitment from Facebook",
+      "responsibilities": "Contribute to the design and implementation of software solutions. Debug and troubleshoot issues. Participate in team meetings and discussions.",
+      "requirements": "Bachelor's degree in Computer Science or equivalent experience. Proficiency in programming languages such as JavaScript, React, or Node.js. Excellent communication skills.",
+      "location": "Menlo Park, CA",
+      "salaryPerMonth": "$5,000"
+    },
+    {
+      "id": 3,
+      "title": "Microsoft Senior Development Program",
+      "logo": "https://picsum.photos/200",
+      "companyName": "Microsoft",
+      "position": "Senior Developer",
+      "description": "This is a senior developer recruitment from Microsoft",
+      "responsibilities": "Lead the development and implementation of software projects. Provide technical guidance to junior team members. Collaborate with cross-functional teams.",
+      "requirements": "Master's degree in Computer Science or equivalent experience. Proven experience in software development and architecture. Expertise in programming languages like C#, .NET, or Azure.",
+      "location": "Redmond, WA",
+      "salaryPerMonth": "$8,000"
+    },
+    {
+      "id": 4,
+      "title": "Amazon Software Engineering Internship",
+      "logo": "https://picsum.photos/200",
+      "companyName": "Amazon",
+      "position": "Software Engineering Intern",
+      "description": "Join Amazon's dynamic software engineering team as an intern",
+      "responsibilities": "Contribute to the development of scalable and reliable software systems. Work on innovative projects with a focus on customer experience. Collaborate with cross-functional teams.",
+      "requirements": "Currently pursuing a degree in Computer Science or related field. Programming skills in Java, Python, or C++. Strong problem-solving and analytical abilities.",
+      "location": "Seattle, WA",
+      "salaryPerMonth": "$4,500"
+    },
+    {
+      "id": 10,
+      "title": "SpaceX Aerospace Engineering Internship",
+      "logo": "https://picsum.photos/200",
+      "companyName": "SpaceX",
+      "position": "Aerospace Engineering Intern",
+      "description": "Contribute to the future of space exploration with SpaceXxxxxxxxxx",
+      "responsibilities": "Assist in aerospace design projects. Conduct testing and analysis. Collaborate with engineering teams.",
+      "requirements": "Aerospace Engineering or related major. Knowledge of aerospace principles and design. Passion for space exploration.",
+      "location": "Hawthorne, CA",
+      "salaryPerMonth": "$6,000"
+    },
+    {
+      "id": 11,
+      "title": "Uber Software Quality Assurance Internship",
+      "logo": "https://picsum.photos/200",
+      "companyName": "Uber",
+      "position": "Software Quality Assurance Intern",
+      "description": "Ensure the quality and reliability of Uber's software applications",
+      "responsibilities": "Conduct software testing and quality assurance. Identify and report bugs. Collaborate with development teams.",
+      "requirements": "Computer Science, Software Engineering, or related major. Knowledge of software testing principles. Attention to detail.",
+      "location": "San Francisco, CA",
+      "salaryPerMonth": "$4,000"
+    },
+    {
+      "id": 12,
+      "title": "Airbnb User Experience Research Internship",
+      "logo": "https://picsum.photos/200",
+      "companyName": "Airbnb",
+      "position": "User Experience Research Intern",
+      "description": "Contribute to the enhancement of user experiences in the hospitality industry",
+      "responsibilities": "Conduct user interviews and surveys. Analyze user feedback and behavior. Work closely with design teams.",
+      "requirements": "Human-Computer Interaction, Psychology, or related major. Experience in user research methodologies. Strong communication and empathy.",
+      "location": "San Francisco, CA",
+      "salaryPerMonth": "$4,200"
+    },
+    {
+      "id": 15,
+      "title": "Oracle Database Administration Internship",
+      "logo": "https://picsum.photos/200",
+      "companyName": "Oracle",
+      "position": "Database Administration Intern",
+      "description": "Learn and contribute to the management of databases with Oracle",
+      "responsibilities": "Assist in database maintenance tasks. Troubleshoot and optimize database performance. Collaborate with database administrators.",
+      "requirements": "Database Administration, Computer Science, or related major. Familiarity with database management systems. Analytical and problem-solving skills.",
+      "location": "Redwood City, CA",
+      "salaryPerMonth": "$4,200"
+    },
+    {
+      "id": 16,
+      "title": "Cisco Network Security Internship",
+      "logo": "https://picsum.photos/200",
+      "companyName": "Cisco",
+      "position": "Network Security Intern",
+      "description": "Contribute to the development and implementation of network security solutions1111111111111111",
+      "responsibilities": "Assist in configuring and monitoring network security systems. Analyze security threats and vulnerabilities. Collaborate with security teams.",
+      "requirements": "Network Security, Computer Science, or related major. Knowledge of network protocols and security principles. Strong problem-solving skills.",
+      "location": "San Jose, CA",
+      "salaryPerMonth": "$4,500"
+    },
+    {
+      "companyName": "Google",
+      "title": "Google Internship Program",
+      "position": "Intern Developer",
+      "description": "This is an internship opportunity from Google",
+      "companyLogo": "",
+      "id": 19
+    },
+    {
+      "companyName": "asdfsdfsadfsdfs",
+      "title": "adfafasdfsda",
+      "position": "adsfsadfsdafasdfsda",
+      "description": "asdfsadfsadfsadf",
+      "companyLogo": "sdffdsafsadf",
+      "id": 21
+    },
+    {
+      "companyName": "sadfsdfsdf",
+      "title": "asdfsadfsdfs",
+      "position": "sadfasdfds",
+      "description": "asdfsdfsdafsd",
+      "companyLogo": "",
+      "responsibilities": "",
+      "id": 22
+    },
+    {
+      "companyName": "asfsfsa",
+      "title": "asdfsdafsda",
+      "position": "asdfsdafsd",
+      "description": "asdfsadfsd",
+      "companyLogo": "",
+      "id": 23
+    }
+  ]
+}

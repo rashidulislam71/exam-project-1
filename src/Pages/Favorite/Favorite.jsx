@@ -19,7 +19,7 @@ const Favorite = () => {
         <div className="jobsListCard">
           <ul className="jobCardInfo-job flex">
             {favorites.length === 0 ? (
-              <h1 className="favoriteEmpty">Favorite Job Empty!</h1>
+              <h1 className="favoriteEmpty"> Empty!</h1>
             ) : (
               favorites.map((value) => (
                 <div key={value.id}>

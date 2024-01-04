@@ -15,6 +15,8 @@ const GlobalProvider = ({ children }) => {
 
   const [editingJob, setEditingJob] = useState([]);
 
+
+
   const fetchJobs = async () => {
     try {
       const response = await axios.get("http://localhost:9000/jobs");
@@ -39,7 +41,8 @@ const GlobalProvider = ({ children }) => {
 
   // Add Favorites
     const addToFavorites = (job) => {
-      toast.success(setFavorites((prevFavorites) => [...prevFavorites, job]));
+      (setFavorites((prevFavorites) => [...prevFavorites, job]));
+      toast.success("Added to Favorites")
       setIsFavorites(false);
     };
 
@@ -49,7 +52,7 @@ const GlobalProvider = ({ children }) => {
       prevFavorites.filter((favorite) => favorite.id !== job.id)
     );
     setIsFavorites(true);
-    toast.error("Removed from favorites");
+    toast.error("Removed from favorites!");
   };
 
   const isJobInFavorites = (job) => {
@@ -69,7 +72,8 @@ const GlobalProvider = ({ children }) => {
   
   // Applied Job
     const addToApplied = (job) => {
-      toast.success(setAppliedJob((prevApplied) => [...prevApplied, job]));
+      (setAppliedJob((prevApplied) => [...prevApplied, job]));
+      toast.success("Applied Successfully!")
       setIsFavorites(true);
     };
 
@@ -79,7 +83,7 @@ const GlobalProvider = ({ children }) => {
         prevApplied.filter((apply) => apply.id !== job.id)
       );
       setIsAppliedJob(true);
-      toast.error("Removed from favorites");
+      toast.error("Removed Apply!");
     };
   
     const isJobInAppliedJob = (job) => {

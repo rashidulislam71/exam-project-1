@@ -1,99 +1,6 @@
 
 
-.signUpPageParent {
-    height: auto;
-    margin: 0 auto;
-    padding-top: 70px;
-    background-color: rgb(225, 238, 235);
-}
 
-.SigUpImage img {
-    height: 610px;
-    width: 630px;
-    box-shadow: 3px 3px 20px rgb(153, 150, 150);
-    opacity: 0.8;
-    border-radius: 4px;
-    outline: 1px solid rgb(133, 221, 221);
-    outline-offset: 7px;
-}
-
-.signUpPageInfo.flex,
-.signInPageInfo.flex {
-    justify-content: space-around;
-    position: relative;
-    background-color: rgb(225, 238, 235);
-    padding: 30px;
-}
-
-.signUpForm {
-    margin: 0px 0;
-    padding: 20px;
-    border-radius: 4px;
-    width: 450px;
-    z-index: 1;
-    box-shadow: 3px 3px 20px rgb(69, 103, 104);
-}
-
-.signUpForm .title h1 {
-    text-align: center;
-    font-size: 33px;
-    color: rgb(33, 126, 126);
-}
-
-hr {
-    margin: 17px 0px 10px 0px;
-    color: rgb(184, 182, 182);
-}
-
-.haveAccount {
-    font-size: 20px;
-    margin: 20px 0px;
-}
-
-.haveAccount p span {
-    font-size: 25px;
-    color: #003c8b;
-    cursor: pointer;
-    transition: all ease .2s;
-    text-decoration: none;
-}
-
-.haveAccount p span:hover {
-    color: #0654ad;
-    text-decoration: underline;
-}
-
-input#fullName,
-input#email,
-input#password,
-input#confirmPassword {
-    width: 100%;
-    padding: 6px 10px;
-    margin: 0px 0px 10px 0px;
-    border: none;
-    outline-color: rgb(156, 212, 173);
-    border-bottom: 1px solid rgb(184, 182, 182);
-    font-size: 18px;
-    color: rgb(54, 52, 52);
-}
-
-.submitBtn button {
-    margin-top: 0px;
-    padding: 10px 10px;
-    width: 100%;
-    border: none;
-    border-radius: 3px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: all ease .2s;
-    background-color: rgb(35, 137, 221);
-    color: white;
-}
-
-.submitBtn button:hover {
-    background-color: rgb(31, 127, 206);
-    box-shadow: 3px 3px 10px rgb(92, 142, 216);
-}
 
 .or hr {
     width: 160px;
@@ -146,7 +53,7 @@ input#confirmPassword {
 .gitHub .text button,
 .google .text button
 {
-    padding: 10px 0px;
+    padding: 16px 7px;
     font-size: 16px;
     border: none;
     outline: none;
@@ -163,24 +70,12 @@ input#confirmPassword {
     background-color: #000;
 }
 
-.signInPageInfo {
-    background-color: rgb(225, 238, 235);
-}
 
-.LogInImage img {
-    margin-top: 40px;
-    border: none;
-    border: none;
-    outline: none;
-}
 
 /* Responsive styles for tablets */
 @media (max-width: 900px) {
 
     /* .SigUpImage img, */
-    .SignInImage img {
-        display: none;
-    }
 
     .SigUpImage img{
         display: none;
@@ -190,8 +85,7 @@ input#confirmPassword {
         width: 100%;
     }
 
-    .signUpPageInfo.flex,
-    .signInPageInfo.flex {
+    .signUpPageInfo.flex{
         flex-direction: column;
         justify-content: center;
         padding: 30px;
@@ -214,7 +108,7 @@ input#confirmPassword {
     .gitHub .text button,
     .google .text button
     {
-        padding: px 5pxpx;
+        padding: 10px 5px;
         font-size: 16px;
         border: none;
         outline: none;
@@ -227,8 +121,7 @@ input#confirmPassword {
 /* Responsive styles for phones */
 @media (max-width: 480px) {
 
-    .SigUpImage img,
-    .SignInImage img {
+    .SigUpImage img{
         display: none;
     }
 
@@ -236,8 +129,7 @@ input#confirmPassword {
         width: 100%;
     }
 
-    .signUpPageInfo.flex,
-    .signInPageInfo.flex {
+    .signUpPageInfo.flex{
         flex-direction: column;
         justify-content: center;
         padding: 20px;

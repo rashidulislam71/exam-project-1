@@ -1,0 +1,10 @@
+
+
+h1.appliedJobNot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(8, 68, 33);
+    margin-left: 130px;
+    height: 80vh;
+}

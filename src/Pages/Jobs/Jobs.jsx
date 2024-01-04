@@ -23,7 +23,7 @@ const Jobs = () => {
       await axios.delete(`http://localhost:9000/jobs/${postId}`);
       const updatedJobData = jobData.filter((job) => job.id !== postId);
       setJobData(updatedJobData);
-      toast.success(`${postId} deleted successfully`);
+      toast.success(`Deleted successfully!`);
     } catch (error) {
       toast.error(`Job post ${postId} deletion failed:`, error);
     }

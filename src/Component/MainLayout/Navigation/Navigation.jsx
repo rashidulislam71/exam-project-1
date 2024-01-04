@@ -1,12 +1,10 @@
-
-
 import "./Navigation.css";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/Firebase.Config";
 import { signOut } from "firebase/auth";
-import logo1 from "../../../assets/images/LOGO3.png"
+import logo1 from "../../../assets/images/LOGO3.png";
 
 const Navigation = () => {
   const [user] = useAuthState(auth);
@@ -19,8 +17,13 @@ const Navigation = () => {
     <div className="navigationParent">
       <div className="navigation flex">
         <div className="navLogo flex">
-        <img src={logo1} alt="LOGO" />
-        <h3>HALAL JIBIKA</h3>
+          <Link to="/">
+            <img src={logo1} alt="LOGO" />
+          </Link>
+          <Link to="/">
+          <h3>HALAL JIBIKA</h3>
+          </Link>
+           
         </div>
 
         <div className="menu flex">
@@ -29,7 +32,6 @@ const Navigation = () => {
           <NavLink to="/favorite">FAVORITE</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
-         
 
           <div className="userInfo flex">
             {user ? (
@@ -48,7 +50,7 @@ const Navigation = () => {
                   color: "rgb(254, 94, 1)",
                 }}
               >
-                {user ?.displayName}
+                {user?.displayName}
               </span>
             ) : (
               <NavLink to="/signup">SIGN UP</NavLink>

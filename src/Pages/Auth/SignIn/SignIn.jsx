@@ -1,8 +1,8 @@
 
 
+import "./Signin.css"
 
 import SocialSignUp from "./../SocialSignUp/SocialSignUp";
-import "../SignUpSignInCSS/SignUpSignIn.css"
 import { Link, useNavigate } from "react-router-dom";
 import loginImage from "../../../assets/images/Log_in_img.png"
 import LogInImage from "../../../assets/images/login4_prev_ui.png";
@@ -43,18 +43,18 @@ const SignIn = () => {
   return (
     <div>
       <ToastContainer />
-      <div className="signUpPageParent">
+      <div className="signInPageParent">
         <div className="signInPageInfo flex">
           <div className="motivation">
             <div className="LogInImage">
-              <img src={loginImage} alt="" />
+              {/* <img src={loginImage} alt="" /> */}
             </div>
           </div>
-          <div className="signUpForm">
+          <div className="signInForm">
             <div className="title">
-              <h1>LOG IN</h1>
+              <h1>Log In</h1>
               <hr />
-              <div className="haveAccount">
+              <div className="haveAccountLogIn">
                 <p>
                   Create a New Free Account?
                   <Link to="/signup">
@@ -70,7 +70,7 @@ const SignIn = () => {
                   type="email"
                   placeholder="Email"
                   name="email"
-                  id="email"
+                  id="emailLogIn"
                   autoFocus
                   required
                 />{" "}
@@ -79,7 +79,7 @@ const SignIn = () => {
                   type="password"
                   placeholder="Password"
                   name="password"
-                  id="password"
+                  id="passwordLogIn"
                   required
                 />{" "}
                 <br />
@@ -90,7 +90,7 @@ const SignIn = () => {
                 ) : (
                   ""
                 )}
-                <div className="submitBtn">
+                <div className="submitBtnLogIn">
                   <button type="submit">LOGIN</button>
                 </div>
               </form>
