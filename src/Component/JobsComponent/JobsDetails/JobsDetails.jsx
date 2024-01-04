@@ -1,21 +1,26 @@
-
-
-import "../../JobsComponent/JobsDetails/JobsDetails.css";
-import Loading from "../../Loading/Loading";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import Loading from "../../Loading/Loading";
+import "../../JobsComponent/JobsDetails/JobsDetails.css";
+import { GlobalContext } from "../../GlobalContext/GlobalContext";
+import { RiHeartsFill } from "react-icons/ri";
+import { RiHeartsLine } from "react-icons/ri";
 
 const JobsDetails = ({ data, deleteJobPost }) => {
-
-  if(!data){
-    return <Loading />
-  };
-  
   const { id, title, companyName, logo, position, description } = data;
+  const { isJobInFavorites, toggleFavorite, setEditingJob, toggleApplied, isJobInAppliedJob } =
+    useContext(GlobalContext);
 
+  const editHandling = (data) => {
+    setEditingJob(data);
+  };
+
+  if (!data) {
+    return <Loading />;
+  }
 
   return (
     <div>
-      
       <div className="jobCard">
         <span className="cImage">
           {<img src={logo} alt="" />}
@@ -37,19 +42,25 @@ const JobsDetails = ({ data, deleteJobPost }) => {
 
         <div className="jobBtn flex">
           <Link to="/jobs">
-            <button onClick={()=>deleteJobPost(id)}>Delete</button>
+            <button onClick={() => deleteJobPost(id)}>Delete</button>
           </Link>
-          <Link to="/jobs">
-            <button>Favorite</button>
-          </Link>
-
-          <Link to="/jobs">
-            <button>Edit</button>
+          <button onClick={() => toggleFavorite(data)}>
+            {isJobInFavorites(data) ? <RiHeartsFill /> : <RiHeartsLine />}
+          </button>
+          <Link to="/postJobs">
+            <button onClick={() => editHandling(data)}>Edit</button>
           </Link>
         </div>
-        <Link to={`/jobs/${id}`}>
-          <button  className="applyBtn">DETAILS & APPLY</button>
-        </Link>
+        <div className="detailsAndApplyBtn ">
+
+          <button onClick={() => toggleApplied(data)} className="applyBtn">
+            {isJobInAppliedJob(data) ? "APPLIED" : "APPLY NOW"}
+          </button>
+
+          <Link to={`/jobs/${id}`}>
+            <button className="detailsBtn"> DETAILS </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

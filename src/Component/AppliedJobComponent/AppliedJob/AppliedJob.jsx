@@ -1,13 +1,16 @@
+
+
 import React, { useContext } from "react";
-import "../PagesCSS/Pages.css";
-import { GlobalContext } from "../../Component/GlobalContext/GlobalContext";
-import Loading from "../../Component/Loading/Loading";
-import FavoriteShow from "../../Component/FavoriteShow/FavoriteShow";
+
+
+import ShowAppliedJob from "../ShowAppliedJob/ShowAppliedJob";
+import { GlobalContext } from "../../GlobalContext/GlobalContext";
+import Loading from "../../Loading/Loading";
 
 const Favorite = () => {
-  const { favorites } = useContext(GlobalContext);
+  const { appliedJob } = useContext(GlobalContext);
 
-  if (!favorites) {
+  if (!appliedJob) {
     return <Loading />;
   }
 
@@ -16,12 +19,12 @@ const Favorite = () => {
       <div className="favoriteSection">
         <div>
           <ul className="jobCardInfo">
-            {favorites.length === 0 ? (
+            {appliedJob.length === 0 ? (
               <h1 style={{textAlign: "center", height: "90vh" }}>Empty</h1>
             ) : (
-              favorites.map((value) => (
+                appliedJob.map((value) => (
                 <div key={value.id}>
-                  <FavoriteShow data={value} />
+                  <ShowAppliedJob key={value.id} data={value} />
                 </div>
               ))
             )}

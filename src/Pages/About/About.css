@@ -1,0 +1,190 @@
+
+
+
+
+/**-----About page start-------**/
+
+
+.about-page {
+    padding: 100px 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  
+  }
+  
+  .header h1 {
+    font-size: 33px;
+    margin: 30px;
+    color: rgb(33, 126, 126);
+    text-transform: uppercase;
+  
+  
+  }
+  
+  .content .title {
+    font-size: 25px;
+    color: rgb(16, 42, 59);
+    margin-top: -10px;
+    padding: 5px 0px;
+    border-bottom: 1px solid rgb(175, 180, 180);
+  
+  }
+  
+  .content {
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 30px;
+    text-align: justify;
+  }
+  
+  .features {
+    margin-bottom: 20px;
+    text-align: center;
+  
+  }
+  
+  .features h2 {
+    font-size: 33px;
+    margin: 100px auto;
+    color: rgb(33, 126, 126);
+    border-bottom: 1px solid;
+    padding: 5px 0px;
+    text-transform: uppercase;
+  
+  }
+  
+  .features ul {
+  
+    padding: 0;
+    margin-top: -50px;
+    margin-left: 80px;
+    list-style-type: square;
+    list-style-position: inside;
+    border-left: 1px solid rgba(12, 33, 63, 0.404);
+    padding: 30px;
+  }
+  
+  .features li {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .team {
+    margin-bottom: 20px;
+  
+  }
+  
+  h2.meetOutTeam {
+    margin-block: 80px 40px;
+    text-align: center;
+    font-size: 33px;
+    ;
+    color: rgb(33, 126, 126);
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .team-member {
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgb(148, 214, 203);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .team-member img {
+    max-width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .member-info {
+    padding: 15px;
+  }
+  
+  .member-info h3 {
+    font-size: 25px;
+    color: #17554b;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .member-info p {
+    font-size: 17px;
+    color: #103e53;
+    line-height: 1.4;
+  }
+  
+  /* Responsive design  about page */
+  @media screen and (max-width: 768px) {
+    .about-page {
+      text-align: left;
+      padding: 20px 20px;
+    }
+  
+    .features ul {
+      margin-left: 30px;
+      list-style-type: square;
+      padding: 13px;
+    }
+  
+    .header h1 {
+      font-size: 28px;
+    }
+  
+    .features h2 {
+      font-size: 27px;
+    }
+  
+    h2.meetOutTeam {
+      text-align: center;
+      font-size: 27px;
+  
+    }
+  
+    .team-member {
+      width: 100%;
+    }
+  }
+  
+  
+  @media screen and (max-width: 480px) {
+    .header h1 {
+      font-size: 25px;
+    }
+    .about-page {
+      text-align: left;
+      padding: 20px 20px;
+    }
+  
+    .features h2 {
+      font-size: 24px;
+    }
+  
+    h2.meetOutTeam {
+      text-align: center;
+      font-size: 24px;
+    }
+  
+    .team-member {
+      width: 100%;
+    }
+  }

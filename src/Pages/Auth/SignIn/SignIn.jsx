@@ -1,13 +1,15 @@
 import SocialSignUp from "./../SocialSignUp/SocialSignUp";
+import "../SignUpSignInCSS/SignUpSignIn.css"
 import { Link, useNavigate } from "react-router-dom";
+import loginImage from "../../../assets/images/Log_in_img.png"
 import LogInImage from "../../../assets/images/login4_prev_ui.png";
-
 import { ToastContainer, toast } from "react-toastify";
 import {
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import Loading from "./../../../Component/Loading/Loading";
 import auth from "../../../Firebase/Firebase.Config";
+
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -23,9 +25,7 @@ const SignIn = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-
-    console.log(email);
-    console.log(password);
+   
     if (!email || !password) {
       return alert("email or password doesn't match!");
     } else {
@@ -44,24 +44,12 @@ const SignIn = () => {
         <div className="signInPageInfo flex">
           <div className="motivation">
             <div className="LogInImage">
-              <img src={LogInImage} alt="" />
-            </div>
-
-            <div className="motivationText">
-              <p>
-                <span>Elevate your professional journey</span> <br />
-                with unwavering motivation. Align passion with purpose,
-                <br /> set clear goals, and embrace challenges. Recognition{" "}
-                <br /> and a positive work culture fuel enthusiasm. In the
-                dynamic <br /> landscape of work, ignite your passion for
-                success, making each task a meaningful step toward achieving
-                your career goals.
-              </p>
+              <img src={loginImage} alt="" />
             </div>
           </div>
           <div className="signUpForm">
             <div className="title">
-              <h1>Registration</h1>
+              <h1>LOG IN</h1>
               <hr />
               <div className="haveAccount">
                 <p>

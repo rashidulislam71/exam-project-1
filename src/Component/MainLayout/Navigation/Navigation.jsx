@@ -28,7 +28,6 @@ const Navigation = () => {
           <NavLink to="/favorite">FAVORITE</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
-          <NavLink to="/show">show</NavLink>
          
 
           <div className="userInfo flex">

@@ -1,12 +1,12 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-family: 'Noto Serif', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-family: 'Noto Serif', sans-serif;
 }
 
-/**-------Fonts--------**/
+
 
 
 
@@ -19,88 +19,133 @@
 .favoriteSection,
 .about-page,
 .contactPage {
-    height: auto;
-    padding-top: 70px;
-    font-family: 'Noto Serif', sans-serif;
-    font-weight: 300;
-    background-color: rgb(225, 238, 235);
+  height: auto;
+  padding-top: 70px;
+  font-family: 'Noto Serif', sans-serif;
+  font-weight: 300;
+  background-color: rgb(225, 238, 235);
 }
 
 .heroSection {
-    position: relative;
+  position: relative;
 }
 
 .bannerInfo {
-    position: relative;
+  position: relative;
 }
 
 .bannerText {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    color: azure;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: azure;
+  
 }
 
 .imgDiv img {
-    max-width: 100%;
+  max-width: 100%;
+  opacity: 0.8;
 
 }
 
+.title-parent {
+  position: relative;
+}
 
 h1.title {
-    font-size: 50px;
-    margin-bottom: 20px;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
-.text {
-    font-size: 20px;
-    line-height: 30px;
-    max-width: 455px;
+.title-parent .title span {
+  font-size: 60px;
+  color: #0ad6b4;
+  font-family: Trebuchet;
+  font-style: italic;
+}
+
+.title-parent .text {
+  margin-left: 40px;
+  font-size: 20px;
+  line-height: 25px;
+  max-width: 390px;
+  text-align: justify;
+  color: rgb(178, 219, 231);
+}
+
+
+.title-parent .text::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  background-color: rgb(127, 214, 207);
+  height: 230px;
+  width: 1px;
+
 }
 
 
 button.homeDetailsBtn {
+
   margin-top: 15px;
   padding: 10px 20px;
   width: 100%;
-  border:none;
+  border: none;
   border-radius: 3px;
-  background-color: rgb(0, 119, 201);
+  background: rgb(11, 163, 209);
   color: white;
-  font-size: 17px;
-  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+  font-size: 18px;
   transition: all .3s ease;
   cursor: pointer;
 }
 
-button.homeDetailsBtn:hover{
-  background: rgb(4, 109, 179);
-  box-shadow: none;
+button.homeDetailsBtn:hover {
+  background: rgb(10, 148, 190);
+  box-shadow: 3px 3px 10px rgb(64, 167, 185);
 }
 
 .ExploreNewBtn button {
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 2px;
-    background: rgb(0, 119, 201);
-    color: #fffcfc;
-    margin-block: 40px;
-    cursor: pointer;
-    transition: .3s;
-    border: none;
-    outline: none;
-    transition: all .3s ease;
-    cursor: pointer;
+  margin-left: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 2px;
+  background: rgb(11, 163, 209);
+  color: #fffcfc;
+  margin-block: 40px;
+  cursor: pointer;
+  transition: .3s;
+  border: none;
+  outline: none;
+  transition: all .3s ease;
+  cursor: pointer;
 }
 
 .ExploreNewBtn button:hover {
-    background: rgb(46, 149, 218);
-    box-shadow: 3px 3px 15px rgb(91, 102, 109);
+  background: rgb(12, 151, 194);
+  box-shadow: 3px 3px 15px rgb(11, 163, 209);
+} 
+
+
+
+/* Responsive styles for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .card {
+      width: 48%; 
+  }
 }
 
+
+@media (min-width: 769px) {
+  
+}
+
+
+
+
 /**-------Job Section Start---------**/
-  /* go JobsDetails component
+/* go JobsDetails component
 /**-------Job Section End---------**/
 
 /**-----Home End-------**/
@@ -108,408 +153,233 @@ button.homeDetailsBtn:hover{
 
 
 
-/**-----Sign Up start-------**/
-
-.signUpPageParent {
-    height: auto;
-    margin: 0 auto;
-    padding-top: 70px;
-}
-
-.SigUpImage img {
-    height: 610px;
-    width: 630px;
-    box-shadow: 3px 3px 20px rgb(153, 150, 150);
-    opacity: 0.8;
-    border-radius: 4px;
-    outline: 1px solid rgb(133, 221, 221);
-    outline-offset: 7px;
-    
-}
 
 
 
-.signUpPageInfo.flex,
-.signInPageInfo.flex {
-    justify-content: space-around;
-    position: relative;
-    background-color: rgb(225, 238, 235);
-    padding: 30px;
-}
-
-.signUpForm {
-    margin: 0px 0;
-    padding: 20px;
-    border-radius: 4px;
-    width: 450px;
-    z-index: 1;
-    box-shadow: 3px 3px 20px rgb(69, 103, 104);
-}
-
-.signUpForm .title {}
-
-.signUpForm .title h1 {
-    text-align: center;
-    font-size: 33px;
-    color: rgb(33, 126, 126);
-}
-
-hr {
-    margin: 17px 0px 10px 0px;
-    color: rgb(184, 182, 182);
-}
-
-.haveAccount {
-    font-size: 20px;
-    margin: 20px 0px;
-}
-
-.haveAccount p {}
-
-.haveAccount p span {
-    font-size: 25px;
-    color: #003c8b;
-    cursor: pointer;
-    transition: all ease .2s;
-    text-decoration: none;
-
-}
-
-.haveAccount p span:hover {
-    color: #0654ad;
-    text-decoration: underline;
-}
-
-input#fullName,
-input#email,
-input#password,
-input#confirmPassword {
-    width: 100%;
-    padding: 6px 10px;
-    margin: 0px 0px 10px 0px;
-    border: none;
-    outline-color: rgb(156, 212, 173);
-    border-bottom: 1px solid rgb(184, 182, 182);
-    font-size: 18px;
-    color: rgb(54, 52, 52);
-}
-
-.submitBtn {}
-
-.submitBtn button {
-    margin-top: 0px;
-    padding: 10px 10px;
-    width: 100%;
-    border: none;
-    border-radius: 3px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: all ease .2s;
-    background-color: rgb(35, 137, 221);
-    color: white;
-}
-
-.submitBtn button:hover {
-    background-color: rgb(31, 127, 206);
-    box-shadow: 3px 3px 10px rgb(92, 142, 216);
-}
-
-/**-------Social start---------**/
-
-.or hr {
-    width: 160px;
-    margin-inline: 5px;
-    margin-top: 30px;
-}
-
-.or p {
-    margin-top: 20px;
-    color: gray;
-}
 
 
-.socialSignUpInfo {}
-
-.social {
-    gap: 30px;
-}
-
-.google,
-.gitHub {
-    margin-top: 20px;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all ease .2s;
-}
-
-.google:hover,
-.gitHub:hover {
-    box-shadow: 3px 3px 10px rgb(65, 63, 63);
-}
-
-.gitHub {
-    background-color: black;
-}
-
-.google {
-    background-color: rgb(58, 170, 88);
-}
-
-.googleLogo {
-    font-size: 50px;
-    margin-left: 10px;
-}
-
-.gitHubLogo {
-    font-size: 35px;
-    color: rgb(240, 239, 239);
-    margin-left: 10px;
-}
 
 
-.text button {
-    padding: 10px 0px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    color: rgb(255, 254, 254);
-    cursor: pointer;
-}
-
-.googleBtn {
-    background-color: rgb(58, 170, 88);
-
-}
-
-.gitBtn {
-    background-color: #000;
-}
-
-/**-------Social End---------**/
-/**-----Sign Up End-------**/
 
 
-/**-----LogIn start-------**/
 
-.signInPageInfo{
-    gap: 0px;
-}
-.LogInImage {}
 
-.LogInImage img {
-    height: 350px;
-    width: 400px;
-    border: none;
-    border: none;
-    outline: none;
-}
 
-.motivation {
-    width: 600px;
-    height: 515px;
-   position: relative;
-    
-}
 
-.motivation .mTitle h1 {
-    margin-bottom: 30px;
-    color:green;
-    font-size: 40px;
-    font-style: italic;
-}
 
-.motivationText{
-    max-width: 500px;
-    height: 515px;
-}
-.motivationText p {
-  margin-bottom: 100px;
-  position: absolute;
-  top: 320px;
-  left: 60px;
-  font-size: 17px;
-}
 
-.motivationText span{
-  font-size: 30px;
-  color:rgb(38, 75, 155);
-  font-weight: 600;
-  position: absolute;
-  top: -40px;
-  left: 0;
-}
 
-/**-----LogIn End-------**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /**-----About page start-------**/
-  
 
-.about-page{
-    padding: 100px 70px;
+
+/* .about-page {
+  padding: 100px 70px;
 }
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  
-  }
-  
-  .header h1 {
-    font-size: 40px;
-    margin: 30px;
-    color:rgb(131, 170, 231) ;
-    
-  }
-  
-  .content .title {
-    font-size: 25px;
-    color: rgb(45, 95, 45);
-    margin-top: -10px;
-    padding: 10px 0px;
-    border-bottom: 1px solid magenta;
 
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.header h1 {
+  font-size: 33px;
+  margin: 30px;
+  color: rgb(33, 126, 126);
+  text-transform: uppercase;
+
+
+}
+
+.content .title {
+  font-size: 25px;
+  color: rgb(16, 42, 59);
+  margin-top: -10px;
+  padding: 5px 0px;
+  border-bottom: 1px solid rgb(175, 180, 180);
+
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.features {
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.features h2 {
+  font-size: 33px;
+  margin: 100px auto;
+  color: rgb(33, 126, 126);
+  border-bottom: 1px solid;
+  padding: 5px 0px;
+  text-transform: uppercase;
+
+}
+
+.features ul {
+
+  padding: 0;
+  margin-top: -50px;
+  margin-left: 80px;
+  list-style-type: square;
+  list-style-position: inside;
+  border-left: 1px solid rgba(12, 33, 63, 0.404);
+  padding: 30px;
+}
+
+.features li {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.team {
+  margin-bottom: 20px;
+
+}
+
+h2.meetOutTeam {
+  margin-block: 80px 40px;
+  text-align: center;
+  font-size: 33px;
+  ;
+  color: rgb(33, 126, 126);
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team-member {
+  text-align: center;
+  width: 300px;
+  margin: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgb(148, 214, 203);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.team-member img {
+  max-width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.member-info {
+  padding: 15px;
+}
+
+.member-info h3 {
+  font-size: 25px;
+  color: #17554b;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.member-info p {
+  font-size: 17px;
+  color: #103e53;
+  line-height: 1.4;
+} */
+
+/* Responsive design  about page */
+/* @media screen and (max-width: 768px) {
+  .about-page {
+    text-align: left;
+    padding: 40px 20px;
   }
-  
-  .content {
-    margin-bottom: 20px;
-    }
-  .content p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-  .features {
-    margin-bottom: 20px;
-    text-align: center;
-    
-  }
-  
-  .features h2 {
-    font-size: 40px;
-    margin: 100px auto;
-    color:rgb(131, 170, 231) ;
-    border-bottom: 1px solid;
-    padding: 5px 0px;
-    
-  }
-  
+
   .features ul {
-    list-style-type: none;
-    padding: 0;
-   margin-top: -70px;
+    margin-left: 30px;
+    list-style-type: square;
+    padding: 13px;
   }
-  
-  .features li {
-    font-size: 18px;
-    margin-bottom: 10px;
+
+  .header h1 {
+    font-size: 28px;
   }
-  
-  .team {
-    margin-bottom: 20px;
-    
+
+  .features h2 {
+    font-size: 27px;
   }
-  
- h2.meetOutTeam {
-    margin-block: 80px 40px;
+
+  h2.meetOutTeam {
     text-align: center;
-    font-size: 40px;;
-    color:rgb(131, 170, 231) ;
-    border-bottom: 1px solid rgb(34, 34, 32);
+    font-size: 27px;
+
   }
-  
-  .team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
+
   .team-member {
-    text-align: center;
-    width: 300px;
-    margin: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    width: 100%;
   }
-  
-  .team-member img {
-    max-width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .member-info {
-    padding: 20px;
-  }
-  
-  .member-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .member-info p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.4;
-  }
-  
-  /* Responsive design  about page */
-  @media screen and (max-width: 768px) {
-    .about-page{
-        text-align:left;
-    }
-  
-    .header h1 {
-      font-size: 32px;
-    }
-  
-    .features h2 {
-      font-size: 32px;
-    }
+}
 
-    h2.meetOutTeam {
-    text-align: center;
-    font-size: 30px;
-    
-  }
-  
-    .team-member {
-      width: 100%;
-    }
-  }
-  
-  
-  @media screen and (max-width: 480px) {
-    .header h1 {
-      font-size: 30px;
-    }
-  
-    .features h2 {
-      font-size: 25px;
-    }
 
-     h2.meetOutTeam {
-        text-align: center;
-        font-size: 30px;
-      }
-  
-    .team-member {
-      width: 100%;
-    }
+@media screen and (max-width: 480px) {
+  .header h1 {
+    font-size: 25px;
   }
+  .about-page {
+    text-align: left;
+    padding: 30px 20px;
+  }
+
+  .features h2 {
+    font-size: 24px;
+  }
+
+  h2.meetOutTeam {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .team-member {
+    width: 100%;
+  }
+} */
 
 /**-----About page End-------**/
 
 
 
-/**-----Contact page Start-------**/
+/* -----Contact page Start-------**/ 
 
-.contact-page {
+/* .contact-page {
   padding: 20px;
   margin: 0 auto;
 }
@@ -523,7 +393,7 @@ input#confirmPassword {
   font-size: 40px;
   margin-bottom: 30px;
   font-weight: 800;
-  color:rgb(90, 166, 222) ;
+  color: rgb(90, 166, 222);
   border-bottom: 1px solid;
 }
 
@@ -552,8 +422,7 @@ label {
 }
 
 input#ConName,
-input#ConEmail
-{
+input#ConEmail {
   margin-bottom: 20px;
   width: 100%;
   font-size: 20px;
@@ -561,16 +430,16 @@ input#ConEmail
   border: none;
   outline: none;
   border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc ;
-  border-right: 1px solid #ccc ;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   border-radius: 0px 20px;
 }
 
-textarea{
+textarea {
   width: 100%;
   font-size: 20px;
   outline: none;
-  padding:20px 0px 0px 10px;
+  padding: 20px 0px 0px 10px;
   border-radius: 20px 0px;
   margin-top: 8px;
 }
@@ -578,7 +447,7 @@ textarea{
 
 .sendBtn button {
   width: 100%;
-  padding: 10px ;
+  padding: 10px;
   font-size: 22px;
   border-radius: 3px;
   border: none;
@@ -590,7 +459,7 @@ textarea{
 
 .sendBtn button:hover {
   background-color: rgb(0, 119, 201);
-  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+
 }
 
 .jobs-paragraph {
@@ -601,17 +470,17 @@ textarea{
   text-align: center;
   font-size: 32px;
   margin-bottom: 20px;
-  color:rgb(90, 166, 222) ;
+  color: rgb(90, 166, 222);
 }
 
 .jobs-paragraph p {
   font-size: 1rem;
   line-height: 1.5;
   color: #555;
-}
+} */
 
 /* Responsive design  */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .contact-header h1 {
     font-size: 32px;
   }
@@ -638,5 +507,6 @@ textarea{
   .contact-form {
     max-width: 100%;
   }
-}
-/**-----Contact page End-------**/
+} */
+
+/**-----Contact page End-------*

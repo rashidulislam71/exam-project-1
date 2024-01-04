@@ -1,6 +1,6 @@
 import React from "react";
 import "../PagesCSS/Pages.css";
-
+import "./Contact.css"
 const Contact = () => {
   return (
     <div className="contactPage">
@@ -54,6 +54,7 @@ const Contact = () => {
 
         <div className="jobs-paragraph">
           <h2>Explore Exciting Job Opportunities</h2>
+          <div className="contactContent">
           <p>
             Discover your dream job on our platform! Whether you're a seasoned
             professional or just starting your career journey, we offer a
@@ -62,6 +63,8 @@ const Contact = () => {
             opportunities. Your next job might be just a click away. Join us in
             shaping your future and advancing your professional growth.
           </p>
+          </div>
+          
         </div>
       </div>
     </div>

@@ -1,0 +1,145 @@
+*-----Contact page Start-------**/ 
+.contact-page {
+    padding: 20px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-header h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    color: rgb(14, 79, 126);
+    border-bottom: 1px solid;
+    padding: 20px;
+}
+
+.contact-header p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 60px;
+}
+
+.contact-form {
+    border-radius: 3px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 10px rgb(145, 197, 212);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: bold;
+    color: rgb(22, 114, 114);
+    font-size: 20px;
+}
+
+input#ConName,
+input#ConEmail {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 0px 10px;
+    outline-color: rgb(126, 221, 177);
+}
+
+textarea {
+    width: 100%;
+    font-size: 20px;
+    outline-color: rgb(126, 221, 177);
+    padding: 20px 0px 0px 10px;
+    border-radius: 20px 0px;
+    margin-top: 8px;
+    border: none;
+}
+
+
+.sendBtn button {
+    width: 100%;
+    padding: 10px;
+    font-size: 22px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    background: rgb(12, 158, 202);
+    color: rgb(228, 237, 243);
+    transition: all 0.3s ease;
+}
+
+.sendBtn button:hover {
+    background-color: rgb(12, 140, 179);
+    box-shadow: 3px 3px 15px rgb(81, 179, 209);
+}
+
+.jobs-paragraph {
+    margin-top: 80px ;
+}
+
+.jobs-paragraph h2 {
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 20px;
+    color: #0E4F7E;
+}
+
+.contactContent{
+    margin: 0px auto;
+    max-width: 958px;
+    padding-bottom: 60px ;
+}
+
+.jobs-paragraph p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #555;
+    text-align: justify;
+   
+}
+
+/* Responsive design  */
+@media screen and (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 32px;
+    }
+
+    .jobs-paragraph h2 {
+        font-size: 28px;
+    }
+
+    .contact-form {
+        max-width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 24px;
+    }
+
+    .jobs-paragraph h2 {
+        font-size: 24px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+/**-----Contact page End-------*

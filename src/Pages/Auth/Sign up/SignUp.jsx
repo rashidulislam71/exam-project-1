@@ -1,6 +1,5 @@
 import SocialSignUp from "../SocialSignUp/SocialSignUp";
-import "../../PagesCSS/Pages.css";
-import "../../../Component/MainLayout/Common/Common.css";
+import "../SignUpSignInCSS/SignUpSignIn.css"
 import signUpImage from "../../../assets/images/sinup3.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import {

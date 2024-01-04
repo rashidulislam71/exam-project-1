@@ -16,6 +16,8 @@ import Error from './../Pages/error/Error';
 import PostJob from '../Component/PostJob/PostJob';
 import axios from 'axios';
 
+import AppliedJob from './../Component/AppliedJobComponent/AppliedJob/AppliedJob';
+
 
 
 const routers = createBrowserRouter([
@@ -64,6 +66,10 @@ const routers = createBrowserRouter([
             {
                 path: "/postJobs",
                 element: <PostJob />
+            },
+            {
+                path: "/appliedJob",
+                element: <AppliedJob />
             },
    
            

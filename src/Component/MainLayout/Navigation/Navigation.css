@@ -2,7 +2,7 @@
 
 
 .navigationParent{
-    
+    position: relative;
 }
 
 .navigation.flex{
@@ -11,6 +11,8 @@
     background:rgba(251, 254, 255, 0.829);
     height: 70px;
     position: fixed;
+    top: 0px;
+    left: 0px;
     width: 100%;
     z-index: 10;
     border-bottom: 5px solid rgb(12, 89, 109);

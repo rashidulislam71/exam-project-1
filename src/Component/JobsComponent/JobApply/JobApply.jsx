@@ -1,36 +1,42 @@
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./JobApply.css";
-import { useContext, useEffect, useState } from "react";
-import axios from "axios";
+import { useContext, useState } from "react";
 import { GlobalContext } from "../../GlobalContext/GlobalContext";
 import Loading from "../../Loading/Loading";
 
-const JobApply = () => {
-  
-  const { jobId } = useParams();
-  const { jobData } = useContext(GlobalContext);
-  const job = jobData.find((j) => j.id === parseInt(jobId));
 
-  if(!job){
-    return <Loading />
-  }
+
+const JobApply = () => {
 
   const navigate = useNavigate();
-  const goBackHandling = ()=> {
-    navigate(-1)
+
+  const { jobId } = useParams();
+  const { jobData, applyJob, isJobInAppliedJob, handleToggleApplied } = useContext(GlobalContext);
+
+  const job = jobData.find((j) => j.id === parseInt(jobId));
+
+  
+
+  if (!job) {
+    return <Loading />;
   }
+
+  const goBackHandling = () => {
+    navigate(-1);
+  };
+
+  
+  const applyNow = () => {
+    applyJob(job)
+  };
 
 
   return (
     <div>
       <div className="job-details-container flex">
         <div className="job-details">
-          <div  className="header flex">
-            <img
-              src={job.logo}
-              alt={job.companyName}
-              className="company-logo"
-            />
+          <div className="header flex">
+            <img src={job.logo} alt={job.companyName} className="company-logo" />
             <div className="company-info">
               <h1 className="companyNam">{job.companyName}</h1>
               <h2 className="companyTitle">{job.title}</h2>
@@ -57,12 +63,14 @@ const JobApply = () => {
           </div>
 
           <div className="btn flex">
-            <button onClick={goBackHandling}  className="backBtn">
-              
+            <button onClick={goBackHandling} className="backBtn">
               Go Back
             </button>
-            <button className="applyBtn">APPLY NOW</button>
+            <button onClick={handleToggleApplied}>
+            {isJobInAppliedJob(jobData) ? "REMOVE" : "APPLY NOW" }
+          </button>
           </div>
+          
         </div>
       </div>
     </div>

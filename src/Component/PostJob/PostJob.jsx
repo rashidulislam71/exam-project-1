@@ -3,10 +3,21 @@ import "./PostJob.css";
 import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { GlobalContext } from "../GlobalContext/GlobalContext";
+import { useNavigate } from "react-router-dom";
 
 const PostJob = () => {
+  const navigate = useNavigate();
+  const { addJob, updateJob, editingJob, setEditingJob } =
+    useContext(GlobalContext);
 
-  const { addJob } = useContext(GlobalContext);
+  const [isEditing, setIsEditing] = useState(false);
+
+  useEffect(() => {
+    if (editingJob) {
+      setJobPost(editingJob);
+      setIsEditing(true);
+    }
+  }, [editingJob]);
 
   const [jobPost, setJobPost] = useState({
     companyName: "",
@@ -26,22 +37,35 @@ const PostJob = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      await addJob(jobPost); 
+      if (isEditing) {
+        await updateJob(jobPost);
+        setEditingJob(null); // Clear editing job after updating
+      } else {
+        await addJob(jobPost);
+      }
+
       setJobPost({
         companyName: "",
         title: "",
         position: "",
         description: "",
         companyLogo: "",
+        responsibilities: ""
       });
-      toast.success("Job posted successfully!");
+      setIsEditing(false);
+      navigate("/jobs");
+      toast.success(
+        isEditing ? "Job updated successfully!" : "Job posted successfully!"
+      );
     } catch (error) {
-      console.error("Error posting job:", error);
-      toast.error("Failed to post job.");
+      console.error("Error posting/updating job:", error);
+      toast.error(`Failed to ${isEditing ? "update" : "post"} job.`);
     }
   };
 
+  // Clear input filed
   const cancelJobPost = () => {
     setJobPost({
       companyName: "",
@@ -49,17 +73,30 @@ const PostJob = () => {
       position: "",
       description: "",
       companyLogo: "",
+      responsibilities: ""
     });
+    setIsEditing(false);
+    setEditingJob(null);
   };
 
-
- 
   return (
     <div className="jobPostParent">
       <div className="job-post-container">
-        <h1 className="job-post-title">Post Your Jobs</h1>
+        <h1 className="job-post-title">
+          {isEditing ? "Edit your Job" : "Post Your Jobs"}
+        </h1>
         <form onSubmit={handleSubmit} className="job-post-form">
           <label className="job-post-label">
+            <label className="job-post-label">
+              Logo url:
+              <input
+                type="text"
+                name="companyLogo"
+                value="https://picsum.photos/200"
+                onChange={handleChange}
+                className="job-post-input"
+              />
+            </label>
             Company Name:
             <input
               type="text"
@@ -96,17 +133,6 @@ const PostJob = () => {
           </label>
 
           <label className="job-post-label">
-            Logo url:
-            <input
-              type="text"
-              name="companyLogo"
-              value={jobPost.companyLogo}
-              onChange={handleChange}
-              className="job-post-input"
-            />
-          </label>
-
-          <label className="job-post-label">
             Description:
             <textarea
               name="description"
@@ -126,7 +152,7 @@ const PostJob = () => {
               Cancel
             </button>
             <button type="submit" className="job-post-submit-button">
-              Post Job
+              {isEditing ? "Update Job" : "Post Job"}
             </button>
           </div>
         </form>

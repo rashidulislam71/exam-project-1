@@ -15,31 +15,33 @@
     padding: 10px;
     font-family: 'Noto Serif', sans-serif;
     font-weight: 600;
-    color: rgb(90, 166, 222);
+    color: rgb(33, 126, 126);
     margin-bottom: 20px;
 }
 
 .jobsSection .title .determination {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 68, 121, 0.31976540616246496) 12%, rgba(0, 212, 255, 1) 100%);
     padding: 5px;
+    color: rgb(13, 59, 59);
 
 }
 
 .jobsSection .motivedForJob {
-    padding: 20px;
+    padding: 31px;
     text-align: center;
     line-height: 25px;
-    font-size: 17px;
-    color: #000000;
+    font-size: 18px;
+    color: #344142;
+    text-align: justify;
 }
 
 .fetchData {
     font-family: 'Noto Serif', sans-serif;
 }
 
-.yourJobs h1 {
+.latestJobs h1 {
     text-align: center;
-    color: rgb(90, 166, 222);
+    color: #217e7e;
     margin-block: 50px;
     font-size: 40px;
     font-weight: 700;
@@ -47,17 +49,17 @@
     padding: 5px;
 }
 
-.jobCardInfo.flex {
-    flex-wrap: wrap;
+.jobCardInfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     max-width: 100%;
-    justify-content: space-between;
     padding: 20px;
+    gap: 20px;
 }
 
 .jobCard {
     padding: 15px;
-    width: 420px;
-    background-color: #e7f0f1;
     text-align: center;
     border-radius: 3px;
     margin-bottom: 25px;
@@ -68,14 +70,13 @@
 
 
 .jobCard .cImage {
-    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
     margin-right: 100px;
-    color: rgb(90, 166, 222);
+    color: rgb(27, 82, 82);
     text-align: left;
 
 }
@@ -83,7 +84,7 @@
 .jobCard .cImage img {
     height: 65px;
     width: 100px;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 3px;
 }
 
@@ -95,8 +96,8 @@
 }
 
 .jobCard p span {
-    color: rgb(32, 83, 155);
-    font-size: 20px;
+    color: rgb(33, 126, 126);
+    font-size: 18px;
 
 }
 
@@ -107,8 +108,8 @@
 }
 
 .jobCard .jobBtn button {
-    background: #91d7ec;
-    color: rgb(11, 20, 32);
+    background: #0c3c643d;
+    color: rgb(13, 34, 48);
     width: 100px;
     text-align: center;
     display: flex;
@@ -119,21 +120,21 @@
 }
 
 .jobBtn button:hover {
-    box-shadow: 3px 3px 10px rgb(167, 202, 199);
+    box-shadow: 3px 3px 10px rgb(65, 165, 157);
 }
 
 .jobCard a {
     text-decoration: none;
 }
 
-.jobCard .applyBtn,
+.jobCard .applyBtn, .detailsBtn,
 .jobBtn button {
     width: 100%;
     margin-top: 15px;
     padding: 10px 30px;
     font-size: 18px;
     border-radius: 3px;
-    background: rgb(82, 153, 68);
+    background: rgb(12, 158, 202);
     color: rgb(211, 227, 253);
     border: none;
     cursor: pointer;
@@ -142,9 +143,16 @@
 
 }
 
-.jobCard .applyBtn:hover {
 
-    box-shadow: 3px 3px 10px rgb(211, 224, 245);
+.detailsAndApplyBtn{
+    gap: 30px;
+
+}
+
+.jobCard .applyBtn:hover,
+.jobCard .detailsBtn:hover
+{
+    box-shadow: 3px 3px 15px rgb(11, 163, 209);
 }
 
 .exploreAllJobBtn {
@@ -158,7 +166,7 @@
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 2px;
-    background: rgb(0, 119, 201);
+    background: rgb(11, 163, 209);
     color: #fffcfc;
     margin-block: 40px;
     cursor: pointer;
@@ -171,27 +179,74 @@
 }
 
 .exploreAllJobBtn button:hover {
-    box-shadow: 3px 3px 10px rgb(211, 224, 245);
+    background: rgb(10, 148, 190);
+    box-shadow: 3px 3px 10px rgb(64, 167, 185);
 }
+
+
 
 
 
 /**-------Post Jobs start--------**/
 
-.post-jobBtn{
-   height: 140px;
-   border: 1px solid;
-   width: 160px;
-   margin: 40px;
-   border-radius: 0px 20px;
+.postAndAppliedJob {
+    justify-content: space-around;
+    position: relative;
+    border-bottom: 1px solid;
+    margin: 30px;
+    border-color: #069263;
+    gap: 50px;
 }
 
-.post-jobBtn button{
+.post-jobBtn,
+.yourAppliedJobs {
+    height: 140px;
+    width: 160px;
+    margin: 40px;
+    border-radius: 0px 20px;
+    text-align: center;
+    background-color: #069263;
+    border: none;
+    outline-offset: 10px;
+    outline: 1px solid rgb(87, 164, 184);
+    transition: .3s;
 
 }
 
-.post-jobBtn button:hover{
-
+.post-jobBtn:hover,
+.yourAppliedJobs:hover {
+    box-shadow: 4px 4px 23px rgb(38, 173, 121);
+    transform: scale(1.1);
 }
+
+.post-jobBtn a,
+.yourAppliedJobs a {
+    text-decoration: none;
+    color: #cae8ec;
+}
+
+
+
+.postAndAppliedJob .title {
+    border-bottom: 1px solid;
+    text-transform: uppercase;
+    color: rgb(27, 66, 82);
+}
+
+
 
 /**-------Post Jobs end--------**/
+
+
+@media (min-width: 480px)and (max-width: 1024px)  {
+    .jobCardInfo {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+@media (max-width: 479px) {
+    .jobCardInfo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

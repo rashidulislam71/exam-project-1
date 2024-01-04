@@ -3,14 +3,12 @@ import bannerImage from "../../assets/images/banner3.jpg";
 import { Link, useLoaderData } from "react-router-dom";
 import Loading from "./../../Component/Loading/Loading";
 import { useEffect, useState } from "react";
-import useFetchData from './../../Component/useFetchData/useFetchData';
+import useFetchData from "./../../Component/useFetchData/useFetchData";
 
 function Home() {
-  
   const { data, loading, error } = useFetchData("http://localhost:9000/jobs");
 
-  const sliceJobs = data.slice(0,6)
-
+  const sliceJobs = data.slice(0, 6);
 
   return (
     <div>
@@ -21,19 +19,24 @@ function Home() {
               <img src={bannerImage} alt="" />
             </div>
             <div className="bannerText">
-              <h1 className="title">Find Jobs and Get Jobs....</h1>
-              <div className="text">
-                <p>
-                  Are you ready to take the next big step in your career? Look
-                  no further! Our job site is your gateway to a world of
-                  exciting opportunities and fulfilling careers.
-                </p>
-              </div>
-                <div className="ExploreNewBtn">
-              <Link to="/signup">
-                  <button>Explore Now.......</button>
-              </Link>
+              <div className="title-parent">
+                <h1 className="title">
+                  Find <span>Jobs</span> and Get J<span>o</span>b....
+                </h1>
+                <div className="text">
+                  <p>
+                    Are you ready to take the next big step in your career? Look
+                    no further! Our job site is your gateway to a world of
+                    exciting opportunities and fulfilling careers.
+                  </p>
                 </div>
+              </div>
+
+              <div className="ExploreNewBtn">
+                <Link to="/signup">
+                  <button>Explore Now.......</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -63,11 +66,10 @@ function Home() {
               </p>
             </div>
           </div>
-          
 
           <div className="fetchData">
-            <div className="yourJobs">
-              <h1>Your Jobs:</h1>
+            <div className="latestJobs">
+              <h1>LATEST JOBS:</h1>
             </div>
             {!loading ? (
               <ul className="jobCardInfo flex">
@@ -100,9 +102,9 @@ function Home() {
                   </div>
                 ))}
               </ul>
-             ) : (
-              <Loading /> 
-            )} 
+            ) : (
+              <Loading />
+            )}
 
             <div className="exploreAllJobBtn">
               <Link to="/jobs">

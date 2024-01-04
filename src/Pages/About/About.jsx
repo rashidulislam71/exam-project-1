@@ -1,5 +1,6 @@
 import React from "react";
 import "../PagesCSS/Pages.css";
+import "./About.css";
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
       </div>
 
       <div className="content">
-        <p className="title">Your gateway to a successful career journey ::__::</p>
+        <p className="title">Your gateway to a successful career journey ::</p>
    
         <p>
           Welcome to our job portal, your gateway to an array of exciting career
@@ -69,8 +70,8 @@ const About = () => {
           <div className="team-member">
             <img src="https://placehold.co/150x150" alt="Rashidul" />
             <div className="member-info">
-              <h3>RASHIDUL ISLAM RASHED</h3>
-              <p>Founder & CEO</p>
+              <h3>RASHIDUL ISLAM </h3>
+              <p> <strong>Founder & CEO</strong></p>
               <p>
                 With a vision to revolutionize the job market, John leads our
                 team with passion and determination.
@@ -81,7 +82,7 @@ const About = () => {
             <img src="https://placehold.co/150x150" alt="Kausar" />
             <div className="member-info">
               <h3>KAUSAR AHAMED</h3>
-              <p>Founder & CEO</p>
+              <p> <strong>Founder & CEO</strong></p>
               <p>
                 With a vision to revolutionize the job market, John leads our
                 team with passion and determination.
@@ -92,7 +93,7 @@ const About = () => {
             <img src="https://placehold.co/150x150" alt="Rashed" />
             <div className="member-info">
               <h3>RASHED ABDULLAH</h3>
-              <p>Founder & CEO</p>
+              <p> <strong>Founder & CEO</strong></p>
               <p>
                 With a vision to revolutionize the job market, John leads our
                 team with passion and determination.
