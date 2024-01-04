@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";

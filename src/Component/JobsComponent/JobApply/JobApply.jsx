@@ -1,5 +1,7 @@
-import { useNavigate, useParams } from "react-router-dom";
+
+
 import "./JobApply.css";
+import { useNavigate, useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import { GlobalContext } from "../../GlobalContext/GlobalContext";
 import Loading from "../../Loading/Loading";
@@ -25,11 +27,7 @@ const JobApply = () => {
     navigate(-1);
   };
 
-  
-  const applyNow = () => {
-    applyJob(job)
-  };
-
+ 
 
   return (
     <div>

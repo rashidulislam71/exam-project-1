@@ -1,0 +1,277 @@
+
+
+
+
+.jobsSection-job,
+.favoriteSection
+
+{
+    padding-block: 100px;
+    background-color: aliceblue;
+}
+
+.postAndAppliedJob-job {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.postAndAppliedBtn-job {
+    position: fixed;
+    top: 100px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.postBtn a,
+.appliedJobsBtn a {
+    text-decoration: none;
+}
+
+.postBtn,
+.appliedJobsBtn {
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.postBtn p,
+.appliedJobsBtn p {
+    font-size: 25px;
+    color: rgb(8, 68, 102);
+    font-weight: bold;
+}
+
+.postBtn button,
+.appliedJobsBtn button {
+
+    border-radius: 30px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(17, 216, 123);
+    transition: all .3s ease;
+
+}
+
+.postBtn button:hover,
+.appliedJobsBtn button:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px rgb(19, 226, 81);
+}
+
+.jobsHat-job h1 {
+    font-size: 30px;
+    color: rgb(33, 68, 60);
+    text-transform: uppercase;
+}
+
+
+.jobsListCard {
+    margin: 0 auto;
+}
+
+.jobCardInfo-job {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width: 400px;
+    padding: 20px;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+/** JobDetails component css **/
+
+.jobCard-jobD {
+    padding: 15px;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    box-shadow: 3px 3px 10px rgb(69, 141, 137);
+    transition: all .3s ease;
+    cursor: pointer;
+    width: 400px;
+
+}
+
+.jobCard-jobD .cImage-jobD {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-right: 100px;
+    color: rgb(27, 82, 82);
+    text-align: left;
+}
+
+.jobCard-jobD .cImage-jobD img {
+    height: 65px;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.jobCard-jobD p {
+    font-size: 17px;
+    color: rgb(16, 53, 102);
+    text-align: left;
+    line-height: 17px;
+}
+
+.jobCard-jobD p span {
+    color: rgb(33, 126, 126);
+    font-size: 18px;
+}
+
+
+/**-------Button section--------**/
+
+
+.jobBtn-jobD {
+    justify-content: space-between;
+}
+
+.jobCard-jobD .jobBtn-jobD button {
+    background: #8faec73d;
+    padding: 7px;
+    color: rgb(13, 34, 48);
+    width: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.jobCard-jobD .jobBtn-jobD .favoriteBtn {
+
+    font-size: 23px;
+    color: rgb(197, 18, 18);
+}
+
+.jobBtn-jobD button:hover {
+    box-shadow: 3px 3px 10px rgb(65, 165, 157);
+}
+
+.jobCard-jobD a {
+    text-decoration: none;
+}
+
+.detailsAndApplyBtn-jobD {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.applyBtn,
+.detailsBtn,
+.jobBtn button {
+    width: 170px;
+    margin-top: 15px;
+    padding: 8px 30px;
+    font-size: 18px;
+    border-radius: 3px;
+    background: rgb(12, 158, 202);
+    color: rgb(211, 227, 253);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.jobCard-jobD .applyBtn:hover,
+.jobCard-jobD .detailsBtn:hover {
+    box-shadow: 3px 3px 20px rgb(11, 163, 209);
+}
+
+
+.linkStyle{
+    width: 170px;
+    margin-top: 15px;
+    padding: 8px 30px;
+    font-size: 18px;
+    border-radius: 3px;
+    background: rgb(12, 202, 154);
+    color: rgb(211, 227, 253);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.jobCard-jobD .linkStyle:hover
+{
+    box-shadow: 3px 3px 20px rgb(62, 190, 158);
+}
+
+
+@media (max-width: 480px) {
+    .jobCard-jobD {
+      width: 90%; 
+      margin: 0 auto; 
+    }
+    
+    .jobCard-jobD .cImage-jobD {
+      flex-direction: column; 
+      gap: 10px; 
+      margin-right: 0; 
+    }
+  
+  }
+  
+  
+  @media (min-width: 481px) and (max-width: 776px) {
+    
+.jobsListCard {
+    margin: 0 auto;
+}
+
+.jobCardInfo-job {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 390px;
+    
+  
+}
+.jobCard-jobD {
+    width: 90%; 
+    margin: 0 auto; 
+  }
+  
+  .jobCard-jobD .cImage-jobD {
+    flex-direction: column; 
+    gap: 10px; 
+    margin-right: 0; 
+  }
+  }
+  
+  
+  @media (min-width: 769px) {
+    .jobCardInfo-job {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 400px;
+      
+    }
+  }

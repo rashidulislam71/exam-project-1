@@ -1,16 +1,14 @@
-import "../PagesCSS/Pages.css";
-import "../../Component/MainLayout/Common/Common.css"
-import "../../Component/JobsComponent/JobsDetails/JobsDetails.css"
-import "../../Component/JobsComponent/JobApply/JobApply.css"
 
+import "./Home.css"
 import bannerImage from "../../assets/images/banner3.jpg";
 import { Link } from "react-router-dom";
 import Loading from "./../../Component/Loading/Loading";
 import useFetchData from "./../../Component/useFetchData/useFetchData";
 
+
 function Home() {
   const { data, loading, error } = useFetchData("http://localhost:9000/jobs");
-
+  
   const sliceJobs = data.slice(0, 6);
 
   return (
@@ -44,16 +42,16 @@ function Home() {
           </div>
         </div>
 
-        <div className="jobsSection">
-          <div className="jobs flex">
-            <div>
-              <div className="title">
+        <div className="jobsSection-home">
+          <div className="jobs-home">
+       
+              <div className="title-home">
                 <h1 className="bePositive">Don't be upset be positive</h1>
                 <h1 className="determination">
                   {" "}
                   Navigating Your Job Hunt with Determination
                 </h1>
-              </div>
+         
               <p className="motivedForJob">
                 Embarking on a job search is a journey of self-discovery and
                 growth. Every application, every interview, and every setback is
@@ -70,16 +68,16 @@ function Home() {
             </div>
           </div>
 
-          <div className="fetchData">
-            <div className="latestJobs">
+          <div className="fetchData-home">
+            <div className="latestJobs-home">
               <h1>LATEST JOBS:</h1>
             </div>
             {!loading ? (
-              <ul className="jobCardInfo flex">
+              <ul className="jobCardInfo-home flex">
                 {sliceJobs.map((value) => (
                   <div key={value.id}>
-                    <div className="jobCard">
-                      <span className="cImage">
+                    <div className="jobCard-home">
+                      <span className="cImage-home">
                         {<img src={value.logo} alt="" />}
 
                         {value.companyName}

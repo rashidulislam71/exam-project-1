@@ -1,0 +1,18 @@
+
+
+
+.favoritePage{
+    background-color: rgb(240, 248, 255);
+}
+
+
+
+.favoriteEmpty{
+    height: 90vh;
+    text-align: center;
+    color: #074b3a;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-left: 140px;
+}

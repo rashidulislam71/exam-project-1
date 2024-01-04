@@ -1,8 +1,4 @@
-import "../../Pages/PagesCSS/Pages.css";
-import "../../Component/MainLayout/Common/Common.css";
-import "../../Component/JobsComponent/JobApply/JobApply.css";
-import "../../Component/JobsComponent/JobsDetails/JobsDetails.css";
-import "../../Component/PostJob/PostJob.css";
+import "./Jobs.css";
 
 import Loading from "./../../Component/Loading/Loading";
 import { Link } from "react-router-dom";
@@ -23,45 +19,51 @@ const Jobs = () => {
 
   // delete
   const deleteJobPost = async (postId) => {
-  
-      try {
-        await axios.delete(`http://localhost:9000/jobs/${postId}`);
-        const updatedJobData = jobData.filter((job) => job.id !== postId);
-        setJobData(updatedJobData);
-        toast.success(`${postId} deleted successfully`);
-      } catch (error) {
-        toast.error(`Job post ${postId} deletion failed:`, error);
-      }
-    
-    
+    try {
+      await axios.delete(`http://localhost:9000/jobs/${postId}`);
+      const updatedJobData = jobData.filter((job) => job.id !== postId);
+      setJobData(updatedJobData);
+      toast.success(`${postId} deleted successfully`);
+    } catch (error) {
+      toast.error(`Job post ${postId} deletion failed:`, error);
+    }
   };
 
   return (
     <div>
       <ToastContainer />
-      <div className="jobsSection">
-        <div className="postAndAppliedJob flex">
-          <div className="post-jobBtn flex">
-            <Link to="/postJobs">
-              <h1>Post Your Jobs</h1>
-            </Link>
+      <div className="jobsSection-job">
+        <div className="postAndAppliedJob-job ">
+          <div className="postAndAppliedBtn-job ">
+            <div className="postBtn">
+              <Link to="/postJobs">
+
+                <button> Go Post Your Jobs</button>
+              </Link>
+            </div>
+
+            <div className="appliedJobsBtn">
+              <Link to="/appliedJob">
+            
+                <button>Go Your Applied Jobs </button>
+              </Link>
+            </div>
           </div>
-          <div className="title">
-            <h1>Jobs Haut! Find Your jobs</h1>
-          </div>
-          <div className="yourAppliedJobs flex">
-            <Link to="/appliedJob">
-              <h1>Your Applied Jobs </h1>
-            </Link>
+          <div className="jobsHat-job">
+            <h1>Jobs Hat! Find Your jobs</h1>
           </div>
         </div>
-        <ul className="jobCardInfo">
+        
+        <div className="jobsListCard">
+        <ul className="jobCardInfo-job flex">
           {jobData.map((value) => (
             <div key={value.id}>
               <JobsDetails deleteJobPost={deleteJobPost} data={value} />
             </div>
           ))}
         </ul>
+        </div>
+      
       </div>
     </div>
   );

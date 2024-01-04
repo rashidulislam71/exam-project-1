@@ -1,0 +1,278 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: 'Noto Serif', sans-serif;
+  }
+  
+  .homePage,
+  .favoriteSection,
+  .jobsSection,
+  .favoriteSection,
+  .about-page,
+  .contactPage {
+    height: auto;
+    padding-top: 70px;
+    font-family: 'Noto Serif', sans-serif;
+    font-weight: 300;
+    background-color: rgb(225, 238, 235);
+  }
+  
+  .heroSection {
+    position: relative;
+  }
+  
+
+.bannerInfo{
+    /* background-image: url('../../assets/images/banner3.jpg'); */
+
+} 
+
+
+.imgDiv img {
+    max-width: 100%;
+    opacity: 0.9;
+    
+}
+
+.bannerText{
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  color: azure;
+  
+}
+  
+  .title-parent {
+    position: relative;
+  }
+  
+  h1.title {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .title-parent .title span {
+    font-size: 60px;
+    color: #0ad6b4;
+    font-family: Trebuchet;
+    font-style: italic;
+  }
+  
+  .title-parent .text{
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 25px;
+    max-width: 390px;
+    text-align: justify;
+    color: rgb(178, 219, 231);
+  }
+  
+  
+  .title-parent .text::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    background-color: rgb(127, 214, 207);
+    height: 230px;
+    width: 1px;
+  
+  }
+
+ 
+  
+  .ExploreNewBtn button {
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 2px;
+    background: rgb(11, 163, 209);
+    color: #fffcfc;
+    margin-block: 40px;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+    outline: none;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+  
+  .ExploreNewBtn button:hover {
+    background: rgb(12, 151, 194);
+    box-shadow: 3px 3px 15px rgb(11, 163, 209);
+  } 
+  
+  .jobsSection-home{
+    font-family: 'Noto Serif', sans-serif;
+}
+
+.jobs-home{
+    margin: 0 auto;
+}
+
+.jobsSection-home .title-home {
+    text-align: center;
+}
+
+h1.bePositive{
+    text-align: center;
+    font-size: px;
+    padding: 10px;
+    font-family: 'Noto Serif', sans-serif;
+    font-weight: 600;
+    color: rgb(33, 126, 126);
+    margin: 40px;
+    
+}
+
+h1.determination{
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 68, 121, 0.31976540616246496) 12%, rgba(0, 212, 255, 1) 100%);
+    padding: 5px;
+    color: rgb(13, 59, 59);
+    text-align: center;
+}
+
+p.motivedForJob {
+    padding: 31px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+    color: #344142;
+    text-align: justify;
+}
+
+
+.fetchData-home {
+    font-family: 'Noto Serif', sans-serif;
+    margin:  0 auto;
+}
+
+.latestJobs-home h1 {
+    text-align: center;
+    color: #217e7e;
+    margin-block: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+
+.jobCardInfo-home{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width: 400px;
+    padding: 20px;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.jobCard-home{
+    padding: 15px;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    box-shadow: 3px 3px 10px rgb(69, 141, 137);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+
+.jobCard-home .cImage-home {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-right: 100px;
+    color: rgb(27, 82, 82);
+    text-align: left;
+}
+
+.jobCard-home .cImage-home img {
+    height: 65px;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.jobCard-home p {
+    font-size: 17px;
+    color: rgb(16, 53, 102);
+    text-align: left;
+    line-height: 17px;
+}
+
+.jobCard-home p span {
+    color: rgb(33, 126, 126);
+    font-size: 18px;
+
+}
+
+
+button.homeDetailsBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: rgb(11, 163, 209);
+    color: white;
+    font-size: 18px;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+  
+  button.homeDetailsBtn:hover {
+    background: rgb(10, 148, 190);
+    box-shadow: 3px 3px 10px rgb(64, 167, 185);
+  }
+
+.exploreAllJobBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exploreAllJobBtn button {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 2px;
+    background: rgb(11, 163, 209);
+    color: #fffcfc;
+    margin-block: 40px;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+    outline: none;
+    transition: all .3s ease;
+    cursor: pointer;
+
+}
+
+.exploreAllJobBtn button:hover {
+    background: rgb(10, 148, 190);
+    box-shadow: 3px 3px 10px rgb(64, 167, 185);
+}
+
+
+@media (min-width: 480px)and (max-width: 1024px)  {
+    .jobCardInfo {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+@media (max-width: 479px) {
+    .jobCardInfo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} 
+   

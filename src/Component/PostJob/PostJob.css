@@ -118,3 +118,54 @@ h1.job-post-title{
      
      }
   }
+
+
+
+
+
+  
+/*-------Post Jobs start--------*/
+
+.postAndAppliedJob {
+  justify-content: space-around;
+  position: relative;
+  border-bottom: 1px solid;
+  margin: 30px;
+  border-color: #069263;
+  gap: 50px;
+}
+
+.post-jobBtn,
+.yourAppliedJobs {
+  height: 140px;
+  width: 160px;
+  margin: 40px;
+  border-radius: 0px 20px;
+  text-align: center;
+  background-color: #069263;
+  border: none;
+  outline-offset: 10px;
+  outline: 1px solid rgb(87, 164, 184);
+  transition: .3s;
+
+}
+
+.post-jobBtn:hover,
+.yourAppliedJobs:hover {
+  box-shadow: 4px 4px 23px rgb(38, 173, 121);
+  transform: scale(1.1);
+}
+
+.post-jobBtn a,
+.yourAppliedJobs a {
+  text-decoration: none;
+  color: #cae8ec;
+}
+
+
+
+.postAndAppliedJob .title {
+  border-bottom: 1px solid;
+  text-transform: uppercase;
+  color: rgb(27, 66, 82);
+} 

@@ -1,8 +1,7 @@
 
 
+
 import React, { useContext } from "react";
-
-
 import ShowAppliedJob from "../ShowAppliedJob/ShowAppliedJob";
 import { GlobalContext } from "../../GlobalContext/GlobalContext";
 import Loading from "../../Loading/Loading";
@@ -15,14 +14,14 @@ const Favorite = () => {
   }
 
   return (
-    <div>
+    <div className=" AppliedPage">
       <div className="favoriteSection">
-        <div>
-          <ul className="jobCardInfo">
+        <div className="jobsListCard">
+          <ul className="jobCardInfo-job flex">
             {appliedJob.length === 0 ? (
-              <h1 style={{textAlign: "center", height: "90vh" }}>Empty</h1>
+              <h1 className="appliedJob">Applied Jobs Not Found!</h1>
             ) : (
-                appliedJob.map((value) => (
+              appliedJob.map((value) => (
                 <div key={value.id}>
                   <ShowAppliedJob key={value.id} data={value} />
                 </div>

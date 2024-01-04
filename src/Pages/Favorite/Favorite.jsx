@@ -1,8 +1,6 @@
+import "./Favorite.css";
+
 import React, { useContext } from "react";
-import "../PagesCSS/Pages.css"
-import "../../Component/PostJob/PostJob.css";
-import "../../Component/JobsComponent/JobApply/JobApply.css"
-import "../../Component/JobsComponent/JobsDetails/JobsDetails.css"
 
 import { GlobalContext } from "../../Component/GlobalContext/GlobalContext";
 import Loading from "../../Component/Loading/Loading";
@@ -18,10 +16,10 @@ const Favorite = () => {
   return (
     <div>
       <div className="favoriteSection">
-        <div>
-          <ul className="jobCardInfo">
+        <div className="jobsListCard">
+          <ul className="jobCardInfo-job flex">
             {favorites.length === 0 ? (
-              <h1 style={{textAlign: "center", height: "90vh" }}>Empty</h1>
+              <h1 className="favoriteEmpty">Favorite Job Empty!</h1>
             ) : (
               favorites.map((value) => (
                 <div key={value.id}>

@@ -1,8 +1,6 @@
 
 
-import "../JobsComponent/JobApply/JobApply.css"
-import "./PostJob.css";
-import "../../Component/MainLayout/Common/Common.css"
+import "./PostJob.css"
 
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";

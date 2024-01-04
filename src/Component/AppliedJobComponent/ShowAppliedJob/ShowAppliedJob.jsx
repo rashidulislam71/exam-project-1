@@ -1,9 +1,3 @@
-
-import "../../MainLayout/Common/Common.css"
-import "../AppliedJob/AppliedJob.css"
-import "../../JobsComponent/JobApply/JobApply.css"
-import "../../JobsComponent/JobsDetails/JobsDetails.css"
-
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../GlobalContext/GlobalContext";
@@ -18,8 +12,8 @@ const FavoriteShow = ({ data }) => {
 
   return (
     <div>
-      <div className="jobCard">
-        <span className="cImage">
+      <div className="jobCard-jobD">
+        <span className="cImage-jobD">
           {<img src={logo} alt="" />}
           {companyName}
         </span>
@@ -37,19 +31,23 @@ const FavoriteShow = ({ data }) => {
           {description}
         </p>
 
-        <div className="jobBtn flex">
-          <button onClick={handleToggleApplied} className="removeApply" style={{justifyContent: "center"}} >
-            {isJobInAppliedJob(data) ? "REMOVE APPLY" : "APPLY NOW" }
-          </button>
+        <div className="jobBtn-jobD flex">
+         
         </div>
-
-        <div className="detailsAndApplyBtn ">
-          <Link to={`/jobs/${id}`}>
-            <button className="detailsBtn"> DETAILS </button>
-          </Link>
+          <div className="detailsAndApplyBtn-jobD ">
+            <button
+              onClick={() => toggleApplied(data)}
+              className={isJobInAppliedJob(data) ? "linkStyle" : " applyBtn"}
+            >
+              {isJobInAppliedJob(data) ? "REMOVE" : "APPLY NOW"}
+            </button>
+            <Link to={`/jobs/${id}`}>
+              <button className="detailsBtn"> DETAILS </button>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

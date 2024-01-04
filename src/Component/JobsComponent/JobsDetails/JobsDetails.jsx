@@ -1,9 +1,5 @@
-
-
-import "../JobApply/JobApply.css"
-import "../JobsDetails/JobsDetails.css";
-import "../../MainLayout/Common/Common.css"
-
+import "./JobsDetails.css";
+import "../../../Pages/Home/Home.css";
 
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -14,8 +10,13 @@ import { RiHeartsLine } from "react-icons/ri";
 
 const JobsDetails = ({ data, deleteJobPost }) => {
   const { id, title, companyName, logo, position, description } = data;
-  const { isJobInFavorites, toggleFavorite, setEditingJob, toggleApplied, isJobInAppliedJob } =
-    useContext(GlobalContext);
+  const {
+    isJobInFavorites,
+    toggleFavorite,
+    setEditingJob,
+    toggleApplied,
+    isJobInAppliedJob,
+  } = useContext(GlobalContext);
 
   const editHandling = (data) => {
     setEditingJob(data);
@@ -27,8 +28,8 @@ const JobsDetails = ({ data, deleteJobPost }) => {
 
   return (
     <div>
-      <div className="jobCard">
-        <span className="cImage">
+      <div className="jobCard-jobD">
+        <span className="cImage-jobD">
           {<img src={logo} alt="" />}
           {companyName}
         </span>
@@ -46,23 +47,26 @@ const JobsDetails = ({ data, deleteJobPost }) => {
           {description}
         </p>
 
-        <div className="jobBtn flex">
+        <div className="jobBtn-jobD flex">
           <Link to="/jobs">
             <button onClick={() => deleteJobPost(id)}>Delete</button>
           </Link>
-          <button onClick={() => toggleFavorite(data)}>
+          <button className="favoriteBtn" onClick={() => toggleFavorite(data)}>
             {isJobInFavorites(data) ? <RiHeartsFill /> : <RiHeartsLine />}
           </button>
           <Link to="/postJobs">
             <button onClick={() => editHandling(data)}>Edit</button>
           </Link>
         </div>
-        <div className="detailsAndApplyBtn ">
-
-          <button onClick={() => toggleApplied(data)} className="applyBtn">
+        <div className="detailsAndApplyBtn-jobD ">
+          <button
+            onClick={() => toggleApplied(data)}
+            className={
+              isJobInAppliedJob(data) ? "linkStyle" : " applyBtn"
+            }
+          >
             {isJobInAppliedJob(data) ? "APPLIED" : "APPLY NOW"}
           </button>
-
           <Link to={`/jobs/${id}`}>
             <button className="detailsBtn"> DETAILS </button>
           </Link>
