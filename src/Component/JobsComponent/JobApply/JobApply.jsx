@@ -64,9 +64,6 @@ const JobApply = () => {
             <button onClick={goBackHandling} className="backBtn">
               Go Back
             </button>
-            <button onClick={handleToggleApplied}>
-            {isJobInAppliedJob(jobData) ? "REMOVE" : "APPLY NOW" }
-          </button>
           </div>
           
         </div>
