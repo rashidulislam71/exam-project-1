@@ -1,3 +1,10 @@
+
+import "../../MainLayout/Common/Common.css"
+import "../AppliedJob/AppliedJob.css"
+import "../ShowAppliedJob/ShowAppliedJob.css"
+import "../../JobsComponent/JobApply/JobApply.css"
+import "../../JobsComponent/JobsDetails/JobsDetails.css"
+
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../GlobalContext/GlobalContext";

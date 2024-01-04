@@ -1,7 +1,12 @@
+
+
+import "../JobApply/JobApply.css"
+import "../JobsDetails/JobsDetails.css";
+import "../../MainLayout/Common/Common.css"
+
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Loading from "../../Loading/Loading";
-import "../../JobsComponent/JobsDetails/JobsDetails.css";
 import { GlobalContext } from "../../GlobalContext/GlobalContext";
 import { RiHeartsFill } from "react-icons/ri";
 import { RiHeartsLine } from "react-icons/ri";

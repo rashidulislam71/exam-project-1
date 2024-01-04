@@ -1,5 +1,5 @@
 import SocialSignUp from "../SocialSignUp/SocialSignUp";
-import "../SignUpSignInCSS/SignUpSignIn.css"
+import "../SignUpSignInCSS//SignUpSignIn.css";
 import signUpImage from "../../../assets/images/sinup3.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import {

@@ -7,7 +7,7 @@
 
 .navigation.flex{
     justify-content: space-between;
-    padding: 10px 80px;
+    padding: 30px 80px;
     background:rgba(251, 254, 255, 0.829);
     height: 70px;
     position: fixed;

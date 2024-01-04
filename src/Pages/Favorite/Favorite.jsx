@@ -1,5 +1,9 @@
 import React, { useContext } from "react";
-import "../PagesCSS/Pages.css";
+import "../PagesCSS/Pages.css"
+import "../../Component/PostJob/PostJob.css";
+import "../../Component/JobsComponent/JobApply/JobApply.css"
+import "../../Component/JobsComponent/JobsDetails/JobsDetails.css"
+
 import { GlobalContext } from "../../Component/GlobalContext/GlobalContext";
 import Loading from "../../Component/Loading/Loading";
 import FavoriteShow from "../../Component/FavoriteShow/FavoriteShow";

@@ -1,12 +1,16 @@
+import "../../Pages/PagesCSS/Pages.css";
+import "../../Component/MainLayout/Common/Common.css";
+import "../../Component/JobsComponent/JobApply/JobApply.css";
+import "../../Component/JobsComponent/JobsDetails/JobsDetails.css";
+import "../../Component/PostJob/PostJob.css";
 import Loading from "./../../Component/Loading/Loading";
 import { Link } from "react-router-dom";
-import "../../Pages/PagesCSS/Pages.css";
 import JobsDetails from "../../Component/JobsComponent/JobsDetails/JobsDetails";
-import postJobImage from "../../assets/images/post job.jpg";
+
 import { useContext } from "react";
 import axios from "axios";
 import { GlobalContext } from "../../Component/GlobalContext/GlobalContext";
-import JobApply from "../../Component/JobsComponent/JobApply/JobApply";
+
 import { ToastContainer, toast } from "react-toastify";
 
 const Jobs = () => {

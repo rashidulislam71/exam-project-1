@@ -1,3 +1,6 @@
+
+
+import "../SignUpSignInCSS/SignUpSignIn.css"
 import { VscGithubInverted } from "react-icons/vsc";
 import { IoLogoGoogleplus } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
@@ -5,11 +8,12 @@ import {
   useSignInWithGithub,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-
 import auth from "../../../Firebase/Firebase.Config";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from "../../../Component/Loading/Loading";
+
+
 
 const SocialSignUp = () => {
   const navigate = useNavigate();
